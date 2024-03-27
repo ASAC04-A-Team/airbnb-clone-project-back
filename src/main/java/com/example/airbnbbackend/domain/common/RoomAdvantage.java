@@ -17,7 +17,7 @@ public class RoomAdvantage {
     @Column(name = "room_advantage_id")
     private Long id;
 
-    @OneToMany(mappedBy = "room_advantage_id", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "roomAdvantage", cascade = CascadeType.ALL)
     private List<Advantage> advantages = new ArrayList<>();
 
     @OneToOne(fetch = FetchType.LAZY)

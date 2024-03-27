@@ -17,7 +17,7 @@ public class RoomComfort {
     @Column(name = "room_comfort_id")
     private Long id;
 
-    @OneToMany(mappedBy = "room_comfort", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "roomComfort", cascade = CascadeType.ALL)
     private List<Comfort> comforts = new ArrayList<>();
 
     @OneToOne(fetch = FetchType.LAZY)

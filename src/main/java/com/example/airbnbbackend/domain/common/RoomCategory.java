@@ -17,7 +17,7 @@ public class RoomCategory {
     @Column(name = "room_category_id")
     private Long id;
 
-    @OneToMany(mappedBy = "room_category", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "roomCategory", cascade = CascadeType.ALL)
     private List<Category> categories = new ArrayList<>();
 
     @OneToOne(fetch = FetchType.LAZY)
