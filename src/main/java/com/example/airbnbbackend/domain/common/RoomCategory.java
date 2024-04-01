@@ -1,5 +1,6 @@
 package com.example.airbnbbackend.domain.common;
 
+import com.example.airbnbbackend.domain.Likes;
 import com.example.airbnbbackend.domain.Room;
 import jakarta.persistence.*;
 import lombok.NoArgsConstructor;
@@ -17,8 +18,10 @@ public class RoomCategory {
     @Column(name = "room_category_id")
     private Long id;
 
+
     @OneToMany(mappedBy = "roomCategory", cascade = CascadeType.ALL)
     private List<Category> categories = new ArrayList<>();
+
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "room_id")
