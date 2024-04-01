@@ -434,3 +434,12 @@ values (1, '/svgIcons/roomComforts/kitchen.svg', '주방'),
        (11, '/svgIcons/roomComforts/kitchen.svg', '냉장고'),
        (12, '/svgIcons/roomComforts/kitchen.svg' ,'전자레인지'),
        (13, '/svgIcons/roomComforts/tv.svg', 'TV');
+
+
+INSERT INTO advantage (advantage_id, description, image_url, name)
+VALUES (1, '물놀이가 가능한 풀장', '/svgIcons/roomAdvantageSvgs/water.svg','마음껏 물놀이를 즐기세요' ),
+(2, '호스트의 편안함', '/svgIcons/roomAdvantageSvgs/expertHost.svg', '경험이 풍부한 호스트' ),
+(3, '조용한 사무공간'  '/svgIcons/roomAdvantageSvgs/workingSpace.svg', '업무 전용 공간'),
+ (4, '셀프 체크인','/svgIcons/roomAdvantageSvgs/selfCheckIn.svg', '셀프 체크인'),
+ (5, '슈퍼 호스트', '/svgIcons/roomAdvantageSvgs/superHost.sv', '슈퍼 호스트'),
+(6,  '무료 주차 혜택을 누리세요.', 'image": "/svgIcons/roomAdvantageSvgs/freeParking.svg','무료 주차 혜택을 누리세요.'),
