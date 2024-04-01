@@ -27,14 +27,18 @@ public class Room {
     @Column(nullable = false)
     private String nation;
 
-    @Column(nullable = false)
+
+    @Column(nullable = false, columnDefinition = "TEXT")
     private String description;
 
     @Column(nullable = false)
-    private Long eachGuestPrice;
+    private String eachGuestPrice;
 
     @Column(nullable = false)
-    private Long extraPetPrice;
+    private String extraPetPrice;
+
+    @Column(nullable = false)
+    private String introduction;
 
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
     private List<Likes> likesList = new ArrayList<>();
