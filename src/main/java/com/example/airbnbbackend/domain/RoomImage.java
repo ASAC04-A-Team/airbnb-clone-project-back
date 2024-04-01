@@ -1,6 +1,7 @@
 package com.example.airbnbbackend.domain;
 
 import jakarta.persistence.*;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
@@ -13,6 +14,7 @@ public class RoomImage {
     @Column(name = "room_image_id")
     private Long id;
 
+    @Getter
     @Column(nullable = false)
     private String imageUrl;
 
