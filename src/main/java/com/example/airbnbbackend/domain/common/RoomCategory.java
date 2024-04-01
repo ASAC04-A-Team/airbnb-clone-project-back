@@ -20,7 +20,7 @@ public class RoomCategory {
     private Category category;
 
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "room_id")
     private Room room;
 }

@@ -22,6 +22,7 @@ public class Review {
     @Column(nullable = false)
     private LocalDateTime writeAt;
 
+
     @Column(nullable = false)
     private Integer score;
 

@@ -4,6 +4,7 @@ import com.example.airbnbbackend.domain.common.RoomAdvantage;
 import com.example.airbnbbackend.domain.common.RoomCategory;
 import com.example.airbnbbackend.domain.common.RoomComfort;
 import jakarta.persistence.*;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
@@ -14,6 +15,7 @@ import java.util.List;
 public class Room {
 
     @Id
+    @Getter
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "room_id")
     private Long id;
@@ -21,9 +23,11 @@ public class Room {
     @Column(nullable = false)
     private String name;
 
+    @Getter
     @Column(nullable = false)
     private String address;
 
+    @Getter
     @Column(nullable = false)
     private String nation;
 
@@ -31,6 +35,7 @@ public class Room {
     @Column(nullable = false, columnDefinition = "TEXT")
     private String description;
 
+    @Getter
     @Column(nullable = false)
     private String eachGuestPrice;
 
@@ -39,6 +44,9 @@ public class Room {
 
     @Column(nullable = false)
     private String introduction;
+
+    @Column(nullable = true)
+    private Boolean gestPreference;
 
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
     private List<Likes> likesList = new ArrayList<>();
@@ -50,8 +58,10 @@ public class Room {
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
     private List<Review> reviews = new ArrayList<>();
 
+    @Getter
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
     private List<RoomImage> roomImages = new ArrayList<>();
+
 
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
     private List<RoomOccupation> roomOccupations = new ArrayList<>();
@@ -59,12 +69,12 @@ public class Room {
     @OneToOne(mappedBy = "room", cascade = CascadeType.ALL)
     private RoomDetail roomDetail;
 
-    @OneToOne(mappedBy = "room", cascade = CascadeType.ALL)
-    private RoomCategory roomCategory;
+    @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
+    private List<RoomCategory> roomCategory;
 
-    @OneToOne(mappedBy = "room", cascade = CascadeType.ALL)
-    private RoomComfort roomComfort;
+    @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
+    private List<RoomComfort> roomComfort;
 
-    @OneToOne(mappedBy = "room", cascade = CascadeType.ALL)
-    private RoomAdvantage roomAdvantage;
+    @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
+    private List<RoomAdvantage> roomAdvantage;
 }
