@@ -1,12 +1,8 @@
 package com.example.airbnbbackend.domain.common;
 
-import com.example.airbnbbackend.domain.Likes;
 import com.example.airbnbbackend.domain.Room;
 import jakarta.persistence.*;
 import lombok.NoArgsConstructor;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @NoArgsConstructor
@@ -19,8 +15,9 @@ public class RoomCategory {
     private Long id;
 
 
-    @OneToMany(mappedBy = "roomCategory", cascade = CascadeType.ALL)
-    private List<Category> categories = new ArrayList<>();
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "category_id")
+    private Category category;
 
 
     @OneToOne(fetch = FetchType.LAZY)

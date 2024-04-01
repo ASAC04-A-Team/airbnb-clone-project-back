@@ -4,9 +4,6 @@ import com.example.airbnbbackend.domain.Room;
 import jakarta.persistence.*;
 import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @Entity
 @NoArgsConstructor
 @Table(name = "room_advantage")
@@ -17,8 +14,9 @@ public class RoomAdvantage {
     @Column(name = "room_advantage_id")
     private Long id;
 
-    @OneToMany(mappedBy = "roomAdvantage", cascade = CascadeType.ALL)
-    private List<Advantage> advantages = new ArrayList<>();
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "advantage_id")
+    private Advantage advantage;
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "room_id")
