@@ -59,12 +59,12 @@ public class Room {
     @OneToOne(mappedBy = "room", cascade = CascadeType.ALL)
     private RoomDetail roomDetail;
 
-    @OneToOne(mappedBy = "room", cascade = CascadeType.ALL)
-    private RoomCategory roomCategory;
+    @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
+    private List<RoomCategory> roomCategory;
 
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
     private List<RoomComfort> roomComfort;
 
-    @OneToOne(mappedBy = "room", cascade = CascadeType.ALL)
-    private RoomAdvantage roomAdvantage;
+    @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
+    private List<RoomAdvantage> roomAdvantage;
 }

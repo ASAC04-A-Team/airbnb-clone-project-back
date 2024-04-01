@@ -18,7 +18,7 @@ public class RoomAdvantage {
     @JoinColumn(name = "advantage_id")
     private Advantage advantage;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "room_id")
     private Room room;
 }
