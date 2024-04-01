@@ -417,7 +417,9 @@ values (1, 1, 1),
        (11, 11, 2),
        (12, 12, 2),
        (13, 13, 2),
-       (14, 14, 2);
+       (14, 14, 2),
+       (15, 1, 2),
+       (16, 1, 3);
 
 
 
@@ -439,7 +441,35 @@ values (1, '/svgIcons/roomComforts/kitchen.svg', '주방'),
 INSERT INTO advantage (advantage_id, description, image_url, name)
 VALUES (1, '물놀이가 가능한 풀장', '/svgIcons/roomAdvantageSvgs/water.svg','마음껏 물놀이를 즐기세요' ),
 (2, '호스트의 편안함', '/svgIcons/roomAdvantageSvgs/expertHost.svg', '경험이 풍부한 호스트' ),
-(3, '조용한 사무공간'  '/svgIcons/roomAdvantageSvgs/workingSpace.svg', '업무 전용 공간'),
+(3, '조용한 사무공간',  '/svgIcons/roomAdvantageSvgs/workingSpace.svg', '업무 전용 공간'),
  (4, '셀프 체크인','/svgIcons/roomAdvantageSvgs/selfCheckIn.svg', '셀프 체크인'),
  (5, '슈퍼 호스트', '/svgIcons/roomAdvantageSvgs/superHost.sv', '슈퍼 호스트'),
-(6,  '무료 주차 혜택을 누리세요.', 'image": "/svgIcons/roomAdvantageSvgs/freeParking.svg','무료 주차 혜택을 누리세요.'),
+(6,  '무료 주차 혜택을 누리세요.', 'image": "/svgIcons/roomAdvantageSvgs/freeParking.svg','무료 주차 혜택을 누리세요.');
+
+INSERT INTO room_advantage (room_advantage_id, room_id, advantage_id)
+values (1, 1, 1),
+       (2, 1, 2),
+       (3, 1, 3),
+       (4, 1, 4),
+       (5, 2, 3),
+       (6, 2, 4),
+       (7, 2, 5),
+       (8, 2, 6),
+       (9, 3, 5),
+       (10, 3, 6),
+       (11, 3, 4),
+       (12, 3, 3),
+       (13, 4, 6),
+       (14, 4, 1),
+       (15, 4, 3),
+       (16, 4, 4),
+       (17, 5, 2),(18, 5, 4),(19, 5, 5),(20, 5, 6),
+       (21, 6, 1),(22, 6, 3),(23, 6, 5),(24, 6, 6),
+       (25, 7, 1),(26, 7, 4),(27, 7, 2),(28, 7, 6),
+       (29, 8, 2),(30, 8, 3),(31, 8, 5),(32, 8, 6),
+       (33, 9, 2),(34, 9, 4),(35, 9, 5),(36, 9, 6),
+       (37, 10, 2),(38, 10, 4),(39, 10, 5),(40, 10, 6),
+       (41, 11, 2),(42, 11, 4),(43, 11, 5),(44, 11, 6),
+       (45, 12, 2),(46, 12, 4),(47, 12, 5),(48, 12, 6),
+       (49, 13, 2),(50, 13, 4),(51, 13, 5),(52, 13, 6),
+       (53, 14, 2),(54, 14, 4),(55, 14, 5),(56, 14, 6);
