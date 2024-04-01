@@ -1,6 +1,7 @@
 package com.example.airbnbbackend.domain;
 
 import jakarta.persistence.*;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
@@ -23,12 +24,15 @@ public class User {
     private String pw;
 
     @Column
+    @Getter
     private String profileImageUrl;
 
     @Column(nullable = false)
+    @Getter
     private String nickname;
 
     @Column(nullable = false)
+    @Getter
     private String nation;
 
     @Column(nullable = false)
