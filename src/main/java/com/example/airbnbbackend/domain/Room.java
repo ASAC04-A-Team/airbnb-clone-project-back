@@ -45,6 +45,9 @@ public class Room {
     @Column(nullable = false)
     private String introduction;
 
+    @Column(nullable = true)
+    private Boolean gestPreference;
+
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
     private List<Likes> likesList = new ArrayList<>();
 
@@ -58,6 +61,7 @@ public class Room {
     @Getter
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
     private List<RoomImage> roomImages = new ArrayList<>();
+
 
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
     private List<RoomOccupation> roomOccupations = new ArrayList<>();

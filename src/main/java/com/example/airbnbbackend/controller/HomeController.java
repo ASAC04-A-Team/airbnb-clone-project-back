@@ -17,7 +17,7 @@ public class HomeController {
 
     private final RoomItemsService roomItemsService;
 
-    @GetMapping("/roomItem")
+    @GetMapping("/")
     public List<EachRoomItemsDto> getEachRoomItems(){
         return roomItemsService.findAllRoomForHomePage();
     }
