@@ -38,4 +38,4 @@ out/
 
 *.yml
 
-logs
+logs.DS_Store
