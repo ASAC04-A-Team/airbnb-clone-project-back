@@ -216,21 +216,6 @@ values (1, 1, false, '2024-04-01 12:00:00', '2024-04-01 12:00:00' ),
        (13, 13, false, '2024-04-01 12:00:00', '2024-04-01 12:00:00' ),
        (14, 14, false, '2024-04-01 12:00:00', '2024-04-01 12:00:00' );
 
-INSERT INTO room_category (room_category_id, room_id, category_id)
-values (1, 1, 1),
-       (2, 2, 1),
-       (3, 3, 1),
-       (4, 4, 1),
-       (5, 5, 1),
-       (6, 6, 1),
-       (7, 7, 1),
-       (8, 8, 2),
-       (9, 9, 2),
-       (10, 10, 2),
-       (11, 11, 2),
-       (12, 12, 2),
-       (13, 13, 2),
-       (14, 14, 2);
 
 INSERT INTO category (category_id, image_url, name)
 VALUES ( 1,
@@ -418,6 +403,23 @@ VALUES ( 1,
         '/images/categoryIcon/categoryIcon61.jpeg',
         '스키');
 
+INSERT INTO room_category (room_category_id, room_id, category_id)
+values (1, 1, 1),
+       (2, 2, 1),
+       (3, 3, 1),
+       (4, 4, 1),
+       (5, 5, 1),
+       (6, 6, 1),
+       (7, 7, 1),
+       (8, 8, 2),
+       (9, 9, 2),
+       (10, 10, 2),
+       (11, 11, 2),
+       (12, 12, 2),
+       (13, 13, 2),
+       (14, 14, 2);
+
+
 
 INSERT INTO comfort (comfort_id, image_url, name)
 values (1, '/svgIcons/roomComforts/kitchen.svg', '주방'),
@@ -427,4 +429,8 @@ values (1, '/svgIcons/roomComforts/kitchen.svg', '주방'),
        (5, '/svgIcons/roomComforts/freeParking.svg', '건물 내 무료주차'),
        (6, '/svgIcons/roomComforts/wifi.svg', '반려동물 입실 가능'),
        (7, '/svgIcons/roomComforts/kitchen.svg', '건조기'),
-       (8, '/svgIcons/roomComforts/wifi.svg', '산 전망')
+       (8, '/svgIcons/roomComforts/wifi.svg', '산 전망'),
+       (10, '/svgIcons/roomComforts/wifi.svg', '에어컨'),
+       (11, '/svgIcons/roomComforts/kitchen.svg', '냉장고'),
+       (12, '/svgIcons/roomComforts/kitchen.svg' ,'전자레인지'),
+       (13, '/svgIcons/roomComforts/tv.svg', 'TV');
