@@ -1,11 +1,13 @@
 package com.example.airbnbbackend.domain;
 
 import jakarta.persistence.*;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
 @NoArgsConstructor
 @Table(name = "user_interest")
+@Getter
 public class UserInterest {
 
     @Id

@@ -17,11 +17,11 @@ public class UserController {
 
     private final UserService userService;
 
-    /* Todo User 사용자 소개 조회 API */
-    @GetMapping("/{userId}")
-    public UserIntroductionResponseDto getUserIntroduction(@PathVariable("UserId") Long userId ){
-        userService.findAllUserIntroduction(userId);
-
+    /* Todo User 사용자 소개 조회 API - 특정 userId를 받으면 user_interest Table을 가져오는 API임*/
+    @GetMapping("/introduction/{userId}")
+    public UserIntroductionResponseDto getUserIntroduction(@PathVariable("userId") Long userId ){
+        UserIntroductionResponseDto UserIntroduction = userService.findAllUserIntroduction(userId);
+        return UserIntroduction;
     }
 
 

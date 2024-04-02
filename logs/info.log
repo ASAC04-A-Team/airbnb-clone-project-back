@@ -3242,3 +3242,1194 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'airbnb.user_interest' doesn'
 [1;35m04-02 09:40:53[0;39m [[1;33mINFO [0;39m] [36mo.s.o.j.LocalContainerEntityManagerFactoryBean.destroy[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default' 
 [1;35m04-02 09:40:53[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.close[0;39m - HikariPool-1 - Shutdown initiated... 
 [1;35m04-02 09:40:53[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.close[0;39m - HikariPool-1 - Shutdown completed. 
+[1;35m04-02 09:41:05[0;39m [[1;33mINFO [0;39m] [36mc.e.a.AirbnbBackEndApplication.logStarting[0;39m - Starting AirbnbBackEndApplication using Java 17.0.10 with PID 25100 (C:\Users\NTX550\Desktop\Spring Boot\airbnb-clone-project-back\build\classes\java\main started by NTX550 in C:\Users\NTX550\Desktop\Spring Boot\airbnb-clone-project-back) 
+[1;35m04-02 09:41:05[0;39m [[1;33mINFO [0;39m] [36mc.e.a.AirbnbBackEndApplication.logStartupProfileInfo[0;39m - No active profile set, falling back to 1 default profile: "default" 
+[1;35m04-02 09:41:06[0;39m [[1;33mINFO [0;39m] [36mo.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn[0;39m - Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+[1;35m04-02 09:41:06[0;39m [[1;33mINFO [0;39m] [36mo.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn[0;39m - Finished Spring Data repository scanning in 71 ms. Found 3 JPA repository interfaces. 
+[1;35m04-02 09:41:06[0;39m [[1;33mINFO [0;39m] [36mo.s.b.w.e.t.TomcatWebServer.initialize[0;39m - Tomcat initialized with port 8080 (http) 
+[1;35m04-02 09:41:06[0;39m [[1;33mINFO [0;39m] [36mo.a.c.h.Http11NioProtocol.log[0;39m - Initializing ProtocolHandler ["http-nio-8080"] 
+[1;35m04-02 09:41:06[0;39m [[1;33mINFO [0;39m] [36mo.a.c.c.StandardService.log[0;39m - Starting service [Tomcat] 
+[1;35m04-02 09:41:06[0;39m [[1;33mINFO [0;39m] [36mo.a.c.c.StandardEngine.log[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.19] 
+[1;35m04-02 09:41:06[0;39m [[1;33mINFO [0;39m] [36mo.a.c.c.C.[.[.[/].log[0;39m - Initializing Spring embedded WebApplicationContext 
+[1;35m04-02 09:41:06[0;39m [[1;33mINFO [0;39m] [36mo.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 1438 ms 
+[1;35m04-02 09:41:06[0;39m [[1;33mINFO [0;39m] [36mo.h.j.i.u.LogHelper.logPersistenceUnitInformation[0;39m - HHH000204: Processing PersistenceUnitInfo [name: default] 
+[1;35m04-02 09:41:06[0;39m [[1;33mINFO [0;39m] [36mo.h.Version.logVersion[0;39m - HHH000412: Hibernate ORM core version 6.4.4.Final 
+[1;35m04-02 09:41:07[0;39m [[1;33mINFO [0;39m] [36mo.h.c.i.RegionFactoryInitiator.initiateService[0;39m - HHH000026: Second-level cache disabled 
+[1;35m04-02 09:41:07[0;39m [[1;33mINFO [0;39m] [36mo.s.o.j.p.SpringPersistenceUnitInfo.addTransformer[0;39m - No LoadTimeWeaver setup: ignoring JPA class transformer 
+[1;35m04-02 09:41:07[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.getConnection[0;39m - HikariPool-1 - Starting... 
+[1;35m04-02 09:41:07[0;39m [[1;33mINFO [0;39m] [36mc.z.h.p.HikariPool.checkFailFast[0;39m - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4d664323 
+[1;35m04-02 09:41:07[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.getConnection[0;39m - HikariPool-1 - Start completed. 
+[1;35m04-02 09:41:08[0;39m [[1;33mINFO [0;39m] [36mo.h.e.t.j.p.i.JtaPlatformInitiator.initiateService[0;39m - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) 
+[1;35m04-02 09:41:08[0;39m [[1;33mWARN [0;39m] [36mo.h.t.s.i.ExceptionHandlerLoggedImpl.handleException[0;39m - GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table host 
+       drop 
+       foreign key FK9hlhx55t325whiraf8newuxcv" via JDBC [Table 'airbnb.host' doesn't exist] 
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table host 
+       drop 
+       foreign key FK9hlhx55t325whiraf8newuxcv" via JDBC [Table 'airbnb.host' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:470)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:242)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:215)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:185)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:155)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:115)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:244)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.example.airbnbbackend.AirbnbBackEndApplication.main(AirbnbBackEndApplication.java:10)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'airbnb.host' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 40 common frames omitted
+[1;35m04-02 09:41:08[0;39m [[1;33mWARN [0;39m] [36mo.h.t.s.i.ExceptionHandlerLoggedImpl.handleException[0;39m - GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table host_review 
+       drop 
+       foreign key FK33s5ltoabwer37ibinuiujgu6" via JDBC [Table 'airbnb.host_review' doesn't exist] 
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table host_review 
+       drop 
+       foreign key FK33s5ltoabwer37ibinuiujgu6" via JDBC [Table 'airbnb.host_review' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:470)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:242)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:215)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:185)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:155)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:115)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:244)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.example.airbnbbackend.AirbnbBackEndApplication.main(AirbnbBackEndApplication.java:10)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'airbnb.host_review' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 40 common frames omitted
+[1;35m04-02 09:41:08[0;39m [[1;33mWARN [0;39m] [36mo.h.t.s.i.ExceptionHandlerLoggedImpl.handleException[0;39m - GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table host_review 
+       drop 
+       foreign key FK7nw7glv3dmy3ew3wxb2nxma0g" via JDBC [Table 'airbnb.host_review' doesn't exist] 
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table host_review 
+       drop 
+       foreign key FK7nw7glv3dmy3ew3wxb2nxma0g" via JDBC [Table 'airbnb.host_review' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:470)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:242)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:215)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:185)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:155)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:115)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:244)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.example.airbnbbackend.AirbnbBackEndApplication.main(AirbnbBackEndApplication.java:10)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'airbnb.host_review' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 40 common frames omitted
+[1;35m04-02 09:41:08[0;39m [[1;33mWARN [0;39m] [36mo.h.t.s.i.ExceptionHandlerLoggedImpl.handleException[0;39m - GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table likes 
+       drop 
+       foreign key FKjtyw0129loi1r9djmh1ahhygm" via JDBC [Table 'airbnb.likes' doesn't exist] 
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table likes 
+       drop 
+       foreign key FKjtyw0129loi1r9djmh1ahhygm" via JDBC [Table 'airbnb.likes' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:470)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:242)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:215)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:185)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:155)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:115)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:244)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.example.airbnbbackend.AirbnbBackEndApplication.main(AirbnbBackEndApplication.java:10)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'airbnb.likes' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 40 common frames omitted
+[1;35m04-02 09:41:08[0;39m [[1;33mWARN [0;39m] [36mo.h.t.s.i.ExceptionHandlerLoggedImpl.handleException[0;39m - GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table likes 
+       drop 
+       foreign key FKi2wo4dyk4rok7v4kak8sgkwx0" via JDBC [Table 'airbnb.likes' doesn't exist] 
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table likes 
+       drop 
+       foreign key FKi2wo4dyk4rok7v4kak8sgkwx0" via JDBC [Table 'airbnb.likes' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:470)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:242)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:215)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:185)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:155)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:115)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:244)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.example.airbnbbackend.AirbnbBackEndApplication.main(AirbnbBackEndApplication.java:10)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'airbnb.likes' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 40 common frames omitted
+[1;35m04-02 09:41:08[0;39m [[1;33mWARN [0;39m] [36mo.h.t.s.i.ExceptionHandlerLoggedImpl.handleException[0;39m - GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table review 
+       drop 
+       foreign key FKewf90irce1ialx2d8ydumyeg7" via JDBC [Table 'airbnb.review' doesn't exist] 
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table review 
+       drop 
+       foreign key FKewf90irce1ialx2d8ydumyeg7" via JDBC [Table 'airbnb.review' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:470)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:242)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:215)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:185)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:155)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:115)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:244)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.example.airbnbbackend.AirbnbBackEndApplication.main(AirbnbBackEndApplication.java:10)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'airbnb.review' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 40 common frames omitted
+[1;35m04-02 09:41:08[0;39m [[1;33mWARN [0;39m] [36mo.h.t.s.i.ExceptionHandlerLoggedImpl.handleException[0;39m - GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table review 
+       drop 
+       foreign key FKiyf57dy48lyiftdrf7y87rnxi" via JDBC [Table 'airbnb.review' doesn't exist] 
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table review 
+       drop 
+       foreign key FKiyf57dy48lyiftdrf7y87rnxi" via JDBC [Table 'airbnb.review' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:470)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:242)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:215)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:185)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:155)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:115)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:244)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.example.airbnbbackend.AirbnbBackEndApplication.main(AirbnbBackEndApplication.java:10)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'airbnb.review' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 40 common frames omitted
+[1;35m04-02 09:41:08[0;39m [[1;33mWARN [0;39m] [36mo.h.t.s.i.ExceptionHandlerLoggedImpl.handleException[0;39m - GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table room 
+       drop 
+       foreign key FKf3dm1xqsr02pbfyvpxnh74oou" via JDBC [Table 'airbnb.room' doesn't exist] 
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table room 
+       drop 
+       foreign key FKf3dm1xqsr02pbfyvpxnh74oou" via JDBC [Table 'airbnb.room' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:470)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:242)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:215)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:185)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:155)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:115)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:244)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.example.airbnbbackend.AirbnbBackEndApplication.main(AirbnbBackEndApplication.java:10)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'airbnb.room' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 40 common frames omitted
+[1;35m04-02 09:41:08[0;39m [[1;33mWARN [0;39m] [36mo.h.t.s.i.ExceptionHandlerLoggedImpl.handleException[0;39m - GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table room_advantage 
+       drop 
+       foreign key FKim7jfg7xq7x237wgqkmr0hw8s" via JDBC [Table 'airbnb.room_advantage' doesn't exist] 
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table room_advantage 
+       drop 
+       foreign key FKim7jfg7xq7x237wgqkmr0hw8s" via JDBC [Table 'airbnb.room_advantage' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:470)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:242)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:215)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:185)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:155)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:115)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:244)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.example.airbnbbackend.AirbnbBackEndApplication.main(AirbnbBackEndApplication.java:10)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'airbnb.room_advantage' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 40 common frames omitted
+[1;35m04-02 09:41:08[0;39m [[1;33mWARN [0;39m] [36mo.h.t.s.i.ExceptionHandlerLoggedImpl.handleException[0;39m - GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table room_advantage 
+       drop 
+       foreign key FK5oxca0pv3l3hdubhlusoyl4xy" via JDBC [Table 'airbnb.room_advantage' doesn't exist] 
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table room_advantage 
+       drop 
+       foreign key FK5oxca0pv3l3hdubhlusoyl4xy" via JDBC [Table 'airbnb.room_advantage' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:470)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:242)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:215)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:185)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:155)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:115)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:244)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.example.airbnbbackend.AirbnbBackEndApplication.main(AirbnbBackEndApplication.java:10)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'airbnb.room_advantage' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 40 common frames omitted
+[1;35m04-02 09:41:08[0;39m [[1;33mWARN [0;39m] [36mo.h.t.s.i.ExceptionHandlerLoggedImpl.handleException[0;39m - GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table room_category 
+       drop 
+       foreign key FKhqmdj56cfo1t9qcej4eot0wy7" via JDBC [Table 'airbnb.room_category' doesn't exist] 
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table room_category 
+       drop 
+       foreign key FKhqmdj56cfo1t9qcej4eot0wy7" via JDBC [Table 'airbnb.room_category' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:470)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:242)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:215)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:185)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:155)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:115)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:244)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.example.airbnbbackend.AirbnbBackEndApplication.main(AirbnbBackEndApplication.java:10)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'airbnb.room_category' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 40 common frames omitted
+[1;35m04-02 09:41:08[0;39m [[1;33mWARN [0;39m] [36mo.h.t.s.i.ExceptionHandlerLoggedImpl.handleException[0;39m - GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table room_category 
+       drop 
+       foreign key FKtajlbk771f5772v06mn26ujg1" via JDBC [Table 'airbnb.room_category' doesn't exist] 
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table room_category 
+       drop 
+       foreign key FKtajlbk771f5772v06mn26ujg1" via JDBC [Table 'airbnb.room_category' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:470)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:242)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:215)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:185)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:155)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:115)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:244)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.example.airbnbbackend.AirbnbBackEndApplication.main(AirbnbBackEndApplication.java:10)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'airbnb.room_category' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 40 common frames omitted
+[1;35m04-02 09:41:08[0;39m [[1;33mWARN [0;39m] [36mo.h.t.s.i.ExceptionHandlerLoggedImpl.handleException[0;39m - GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table room_comfort 
+       drop 
+       foreign key FKlr95rkpr5hl4yxcxn24peb53p" via JDBC [Table 'airbnb.room_comfort' doesn't exist] 
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table room_comfort 
+       drop 
+       foreign key FKlr95rkpr5hl4yxcxn24peb53p" via JDBC [Table 'airbnb.room_comfort' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:470)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:242)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:215)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:185)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:155)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:115)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:244)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.example.airbnbbackend.AirbnbBackEndApplication.main(AirbnbBackEndApplication.java:10)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'airbnb.room_comfort' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 40 common frames omitted
+[1;35m04-02 09:41:08[0;39m [[1;33mWARN [0;39m] [36mo.h.t.s.i.ExceptionHandlerLoggedImpl.handleException[0;39m - GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table room_comfort 
+       drop 
+       foreign key FKh4l50me6qi4xd7w5j5fi0ie7d" via JDBC [Table 'airbnb.room_comfort' doesn't exist] 
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table room_comfort 
+       drop 
+       foreign key FKh4l50me6qi4xd7w5j5fi0ie7d" via JDBC [Table 'airbnb.room_comfort' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:470)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:242)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:215)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:185)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:155)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:115)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:244)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.example.airbnbbackend.AirbnbBackEndApplication.main(AirbnbBackEndApplication.java:10)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'airbnb.room_comfort' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 40 common frames omitted
+[1;35m04-02 09:41:08[0;39m [[1;33mWARN [0;39m] [36mo.h.t.s.i.ExceptionHandlerLoggedImpl.handleException[0;39m - GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table room_detail 
+       drop 
+       foreign key FKpmgj6lg2cwtdt90qdw076hfej" via JDBC [Table 'airbnb.room_detail' doesn't exist] 
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table room_detail 
+       drop 
+       foreign key FKpmgj6lg2cwtdt90qdw076hfej" via JDBC [Table 'airbnb.room_detail' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:470)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:242)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:215)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:185)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:155)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:115)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:244)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.example.airbnbbackend.AirbnbBackEndApplication.main(AirbnbBackEndApplication.java:10)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'airbnb.room_detail' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 40 common frames omitted
+[1;35m04-02 09:41:08[0;39m [[1;33mWARN [0;39m] [36mo.h.t.s.i.ExceptionHandlerLoggedImpl.handleException[0;39m - GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table room_image 
+       drop 
+       foreign key FKcme41omxvwoj00bhqk7fwt70v" via JDBC [Table 'airbnb.room_image' doesn't exist] 
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table room_image 
+       drop 
+       foreign key FKcme41omxvwoj00bhqk7fwt70v" via JDBC [Table 'airbnb.room_image' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:470)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:242)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:215)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:185)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:155)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:115)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:244)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.example.airbnbbackend.AirbnbBackEndApplication.main(AirbnbBackEndApplication.java:10)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'airbnb.room_image' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 40 common frames omitted
+[1;35m04-02 09:41:08[0;39m [[1;33mWARN [0;39m] [36mo.h.t.s.i.ExceptionHandlerLoggedImpl.handleException[0;39m - GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table room_occupation 
+       drop 
+       foreign key FKowfxuuq36h976v60pmgsawvat" via JDBC [Table 'airbnb.room_occupation' doesn't exist] 
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table room_occupation 
+       drop 
+       foreign key FKowfxuuq36h976v60pmgsawvat" via JDBC [Table 'airbnb.room_occupation' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:470)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:242)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:215)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:185)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:155)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:115)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:244)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.example.airbnbbackend.AirbnbBackEndApplication.main(AirbnbBackEndApplication.java:10)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'airbnb.room_occupation' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 40 common frames omitted
+[1;35m04-02 09:41:08[0;39m [[1;33mWARN [0;39m] [36mo.h.t.s.i.ExceptionHandlerLoggedImpl.handleException[0;39m - GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table user_interest 
+       drop 
+       foreign key FKdi9smphhv09dottb2sc1j3k64" via JDBC [Table 'airbnb.user_interest' doesn't exist] 
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table user_interest 
+       drop 
+       foreign key FKdi9smphhv09dottb2sc1j3k64" via JDBC [Table 'airbnb.user_interest' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:470)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:242)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:215)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:185)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:155)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:115)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:244)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.example.airbnbbackend.AirbnbBackEndApplication.main(AirbnbBackEndApplication.java:10)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'airbnb.user_interest' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 40 common frames omitted
+[1;35m04-02 09:41:10[0;39m [[1;33mINFO [0;39m] [36mo.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory[0;39m - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+[1;35m04-02 09:41:10[0;39m [[1;33mWARN [0;39m] [36mo.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor[0;39m - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+[1;35m04-02 09:41:11[0;39m [[1;33mWARN [0;39m] [36mo.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration.checkTemplateLocationExists[0;39m - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false) 
+[1;35m04-02 09:41:11[0;39m [[1;33mINFO [0;39m] [36mo.a.c.h.Http11NioProtocol.log[0;39m - Starting ProtocolHandler ["http-nio-8080"] 
+[1;35m04-02 09:41:11[0;39m [[1;33mINFO [0;39m] [36mo.s.b.w.e.t.TomcatWebServer.start[0;39m - Tomcat started on port 8080 (http) with context path '' 
+[1;35m04-02 09:41:11[0;39m [[1;33mINFO [0;39m] [36mc.e.a.AirbnbBackEndApplication.logStarted[0;39m - Started AirbnbBackEndApplication in 6.554 seconds (process running for 7.186) 
+[1;35m04-02 10:00:38[0;39m [[1;33mINFO [0;39m] [36mo.s.o.j.LocalContainerEntityManagerFactoryBean.destroy[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default' 
+[1;35m04-02 10:00:38[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.close[0;39m - HikariPool-1 - Shutdown initiated... 
+[1;35m04-02 10:00:38[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.close[0;39m - HikariPool-1 - Shutdown completed. 
+[1;35m04-02 10:00:43[0;39m [[1;33mINFO [0;39m] [36mc.e.a.AirbnbBackEndApplication.logStarting[0;39m - Starting AirbnbBackEndApplication using Java 17.0.10 with PID 23444 (C:\Users\NTX550\Desktop\Spring Boot\airbnb-clone-project-back\build\classes\java\main started by NTX550 in C:\Users\NTX550\Desktop\Spring Boot\airbnb-clone-project-back) 
+[1;35m04-02 10:00:43[0;39m [[1;33mINFO [0;39m] [36mc.e.a.AirbnbBackEndApplication.logStartupProfileInfo[0;39m - No active profile set, falling back to 1 default profile: "default" 
+[1;35m04-02 10:00:45[0;39m [[1;33mINFO [0;39m] [36mo.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn[0;39m - Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+[1;35m04-02 10:00:45[0;39m [[1;33mINFO [0;39m] [36mo.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn[0;39m - Finished Spring Data repository scanning in 103 ms. Found 4 JPA repository interfaces. 
+[1;35m04-02 10:00:45[0;39m [[1;33mINFO [0;39m] [36mo.s.b.w.e.t.TomcatWebServer.initialize[0;39m - Tomcat initialized with port 8080 (http) 
+[1;35m04-02 10:00:45[0;39m [[1;33mINFO [0;39m] [36mo.a.c.h.Http11NioProtocol.log[0;39m - Initializing ProtocolHandler ["http-nio-8080"] 
+[1;35m04-02 10:00:45[0;39m [[1;33mINFO [0;39m] [36mo.a.c.c.StandardService.log[0;39m - Starting service [Tomcat] 
+[1;35m04-02 10:00:45[0;39m [[1;33mINFO [0;39m] [36mo.a.c.c.StandardEngine.log[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.19] 
+[1;35m04-02 10:00:46[0;39m [[1;33mINFO [0;39m] [36mo.a.c.c.C.[.[.[/].log[0;39m - Initializing Spring embedded WebApplicationContext 
+[1;35m04-02 10:00:46[0;39m [[1;33mINFO [0;39m] [36mo.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 1996 ms 
+[1;35m04-02 10:00:46[0;39m [[1;33mINFO [0;39m] [36mo.h.j.i.u.LogHelper.logPersistenceUnitInformation[0;39m - HHH000204: Processing PersistenceUnitInfo [name: default] 
+[1;35m04-02 10:00:46[0;39m [[1;33mINFO [0;39m] [36mo.h.Version.logVersion[0;39m - HHH000412: Hibernate ORM core version 6.4.4.Final 
+[1;35m04-02 10:00:46[0;39m [[1;33mINFO [0;39m] [36mo.h.c.i.RegionFactoryInitiator.initiateService[0;39m - HHH000026: Second-level cache disabled 
+[1;35m04-02 10:00:46[0;39m [[1;33mINFO [0;39m] [36mo.s.o.j.p.SpringPersistenceUnitInfo.addTransformer[0;39m - No LoadTimeWeaver setup: ignoring JPA class transformer 
+[1;35m04-02 10:00:46[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.getConnection[0;39m - HikariPool-1 - Starting... 
+[1;35m04-02 10:00:47[0;39m [[1;33mINFO [0;39m] [36mc.z.h.p.HikariPool.checkFailFast[0;39m - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@38848217 
+[1;35m04-02 10:00:47[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.getConnection[0;39m - HikariPool-1 - Start completed. 
+[1;35m04-02 10:00:48[0;39m [[1;33mINFO [0;39m] [36mo.h.e.t.j.p.i.JtaPlatformInitiator.initiateService[0;39m - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) 
+[1;35m04-02 10:00:51[0;39m [[1;33mINFO [0;39m] [36mo.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory[0;39m - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+[1;35m04-02 10:00:52[0;39m [[1;33mWARN [0;39m] [36mo.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor[0;39m - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+[1;35m04-02 10:00:52[0;39m [[1;33mWARN [0;39m] [36mo.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration.checkTemplateLocationExists[0;39m - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false) 
+[1;35m04-02 10:00:52[0;39m [[1;33mINFO [0;39m] [36mo.a.c.h.Http11NioProtocol.log[0;39m - Starting ProtocolHandler ["http-nio-8080"] 
+[1;35m04-02 10:00:52[0;39m [[1;33mINFO [0;39m] [36mo.s.b.w.e.t.TomcatWebServer.start[0;39m - Tomcat started on port 8080 (http) with context path '' 
+[1;35m04-02 10:00:52[0;39m [[1;33mINFO [0;39m] [36mc.e.a.AirbnbBackEndApplication.logStarted[0;39m - Started AirbnbBackEndApplication in 9.709 seconds (process running for 10.449) 
+[1;35m04-02 10:04:02[0;39m [[1;33mINFO [0;39m] [36mo.a.c.c.C.[.[.[/].log[0;39m - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+[1;35m04-02 10:04:02[0;39m [[1;33mINFO [0;39m] [36mo.s.w.s.DispatcherServlet.initServletBean[0;39m - Initializing Servlet 'dispatcherServlet' 
+[1;35m04-02 10:04:02[0;39m [[1;33mINFO [0;39m] [36mo.s.w.s.DispatcherServlet.initServletBean[0;39m - Completed initialization in 3 ms 
+[1;35m04-02 10:04:25[0;39m [[1;33mINFO [0;39m] [36mo.s.o.j.LocalContainerEntityManagerFactoryBean.destroy[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default' 
+[1;35m04-02 10:04:25[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.close[0;39m - HikariPool-1 - Shutdown initiated... 
+[1;35m04-02 10:04:25[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.close[0;39m - HikariPool-1 - Shutdown completed. 
+[1;35m04-02 10:04:32[0;39m [[1;33mINFO [0;39m] [36mc.e.a.AirbnbBackEndApplication.logStarting[0;39m - Starting AirbnbBackEndApplication using Java 17.0.10 with PID 15756 (C:\Users\NTX550\Desktop\Spring Boot\airbnb-clone-project-back\build\classes\java\main started by NTX550 in C:\Users\NTX550\Desktop\Spring Boot\airbnb-clone-project-back) 
+[1;35m04-02 10:04:32[0;39m [[1;33mINFO [0;39m] [36mc.e.a.AirbnbBackEndApplication.logStartupProfileInfo[0;39m - No active profile set, falling back to 1 default profile: "default" 
+[1;35m04-02 10:04:33[0;39m [[1;33mINFO [0;39m] [36mo.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn[0;39m - Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+[1;35m04-02 10:04:33[0;39m [[1;33mINFO [0;39m] [36mo.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn[0;39m - Finished Spring Data repository scanning in 72 ms. Found 4 JPA repository interfaces. 
+[1;35m04-02 10:04:34[0;39m [[1;33mINFO [0;39m] [36mo.s.b.w.e.t.TomcatWebServer.initialize[0;39m - Tomcat initialized with port 8080 (http) 
+[1;35m04-02 10:04:34[0;39m [[1;33mINFO [0;39m] [36mo.a.c.h.Http11NioProtocol.log[0;39m - Initializing ProtocolHandler ["http-nio-8080"] 
+[1;35m04-02 10:04:34[0;39m [[1;33mINFO [0;39m] [36mo.a.c.c.StandardService.log[0;39m - Starting service [Tomcat] 
+[1;35m04-02 10:04:34[0;39m [[1;33mINFO [0;39m] [36mo.a.c.c.StandardEngine.log[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.19] 
+[1;35m04-02 10:04:34[0;39m [[1;33mINFO [0;39m] [36mo.a.c.c.C.[.[.[/].log[0;39m - Initializing Spring embedded WebApplicationContext 
+[1;35m04-02 10:04:34[0;39m [[1;33mINFO [0;39m] [36mo.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 1910 ms 
+[1;35m04-02 10:04:34[0;39m [[1;33mINFO [0;39m] [36mo.h.j.i.u.LogHelper.logPersistenceUnitInformation[0;39m - HHH000204: Processing PersistenceUnitInfo [name: default] 
+[1;35m04-02 10:04:34[0;39m [[1;33mINFO [0;39m] [36mo.h.Version.logVersion[0;39m - HHH000412: Hibernate ORM core version 6.4.4.Final 
+[1;35m04-02 10:04:34[0;39m [[1;33mINFO [0;39m] [36mo.h.c.i.RegionFactoryInitiator.initiateService[0;39m - HHH000026: Second-level cache disabled 
+[1;35m04-02 10:04:35[0;39m [[1;33mINFO [0;39m] [36mo.s.o.j.p.SpringPersistenceUnitInfo.addTransformer[0;39m - No LoadTimeWeaver setup: ignoring JPA class transformer 
+[1;35m04-02 10:04:35[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.getConnection[0;39m - HikariPool-1 - Starting... 
+[1;35m04-02 10:04:35[0;39m [[1;33mINFO [0;39m] [36mc.z.h.p.HikariPool.checkFailFast[0;39m - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3a5ce4b8 
+[1;35m04-02 10:04:35[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.getConnection[0;39m - HikariPool-1 - Start completed. 
+[1;35m04-02 10:04:37[0;39m [[1;33mINFO [0;39m] [36mo.h.e.t.j.p.i.JtaPlatformInitiator.initiateService[0;39m - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) 
+[1;35m04-02 10:04:39[0;39m [[1;33mINFO [0;39m] [36mo.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory[0;39m - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+[1;35m04-02 10:04:40[0;39m [[1;33mWARN [0;39m] [36mo.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor[0;39m - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+[1;35m04-02 10:04:40[0;39m [[1;33mWARN [0;39m] [36mo.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration.checkTemplateLocationExists[0;39m - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false) 
+[1;35m04-02 10:04:40[0;39m [[1;33mINFO [0;39m] [36mo.a.c.h.Http11NioProtocol.log[0;39m - Starting ProtocolHandler ["http-nio-8080"] 
+[1;35m04-02 10:04:40[0;39m [[1;33mINFO [0;39m] [36mo.s.b.w.e.t.TomcatWebServer.start[0;39m - Tomcat started on port 8080 (http) with context path '' 
+[1;35m04-02 10:04:40[0;39m [[1;33mINFO [0;39m] [36mc.e.a.AirbnbBackEndApplication.logStarted[0;39m - Started AirbnbBackEndApplication in 9.473 seconds (process running for 10.341) 
+[1;35m04-02 10:04:47[0;39m [[1;33mINFO [0;39m] [36mo.a.c.c.C.[.[.[/].log[0;39m - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+[1;35m04-02 10:04:47[0;39m [[1;33mINFO [0;39m] [36mo.s.w.s.DispatcherServlet.initServletBean[0;39m - Initializing Servlet 'dispatcherServlet' 
+[1;35m04-02 10:04:47[0;39m [[1;33mINFO [0;39m] [36mo.s.w.s.DispatcherServlet.initServletBean[0;39m - Completed initialization in 2 ms 
+[1;35m04-02 10:05:01[0;39m [[1;33mWARN [0;39m] [36mo.s.w.s.m.s.DefaultHandlerExceptionResolver.logException[0;39m - Resolved [org.springframework.web.bind.MissingPathVariableException: Required URI template variable 'UserId' for method parameter type Long is not present] 
+[1;35m04-02 10:05:27[0;39m [[1;33mWARN [0;39m] [36mo.s.w.s.m.s.DefaultHandlerExceptionResolver.logException[0;39m - Resolved [org.springframework.web.bind.MissingPathVariableException: Required URI template variable 'UserId' for method parameter type Long is not present] 
+[1;35m04-02 10:05:36[0;39m [[1;33mINFO [0;39m] [36mo.s.o.j.LocalContainerEntityManagerFactoryBean.destroy[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default' 
+[1;35m04-02 10:05:36[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.close[0;39m - HikariPool-1 - Shutdown initiated... 
+[1;35m04-02 10:05:36[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.close[0;39m - HikariPool-1 - Shutdown completed. 
+[1;35m04-02 10:05:40[0;39m [[1;33mINFO [0;39m] [36mc.e.a.AirbnbBackEndApplication.logStarting[0;39m - Starting AirbnbBackEndApplication using Java 17.0.10 with PID 15424 (C:\Users\NTX550\Desktop\Spring Boot\airbnb-clone-project-back\build\classes\java\main started by NTX550 in C:\Users\NTX550\Desktop\Spring Boot\airbnb-clone-project-back) 
+[1;35m04-02 10:05:40[0;39m [[1;33mINFO [0;39m] [36mc.e.a.AirbnbBackEndApplication.logStartupProfileInfo[0;39m - No active profile set, falling back to 1 default profile: "default" 
+[1;35m04-02 10:05:41[0;39m [[1;33mINFO [0;39m] [36mo.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn[0;39m - Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+[1;35m04-02 10:05:41[0;39m [[1;33mINFO [0;39m] [36mo.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn[0;39m - Finished Spring Data repository scanning in 65 ms. Found 4 JPA repository interfaces. 
+[1;35m04-02 10:05:41[0;39m [[1;33mINFO [0;39m] [36mo.s.b.w.e.t.TomcatWebServer.initialize[0;39m - Tomcat initialized with port 8080 (http) 
+[1;35m04-02 10:05:41[0;39m [[1;33mINFO [0;39m] [36mo.a.c.h.Http11NioProtocol.log[0;39m - Initializing ProtocolHandler ["http-nio-8080"] 
+[1;35m04-02 10:05:41[0;39m [[1;33mINFO [0;39m] [36mo.a.c.c.StandardService.log[0;39m - Starting service [Tomcat] 
+[1;35m04-02 10:05:41[0;39m [[1;33mINFO [0;39m] [36mo.a.c.c.StandardEngine.log[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.19] 
+[1;35m04-02 10:05:41[0;39m [[1;33mINFO [0;39m] [36mo.a.c.c.C.[.[.[/].log[0;39m - Initializing Spring embedded WebApplicationContext 
+[1;35m04-02 10:05:41[0;39m [[1;33mINFO [0;39m] [36mo.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 1703 ms 
+[1;35m04-02 10:05:42[0;39m [[1;33mINFO [0;39m] [36mo.h.j.i.u.LogHelper.logPersistenceUnitInformation[0;39m - HHH000204: Processing PersistenceUnitInfo [name: default] 
+[1;35m04-02 10:05:42[0;39m [[1;33mINFO [0;39m] [36mo.h.Version.logVersion[0;39m - HHH000412: Hibernate ORM core version 6.4.4.Final 
+[1;35m04-02 10:05:42[0;39m [[1;33mINFO [0;39m] [36mo.h.c.i.RegionFactoryInitiator.initiateService[0;39m - HHH000026: Second-level cache disabled 
+[1;35m04-02 10:05:42[0;39m [[1;33mINFO [0;39m] [36mo.s.o.j.p.SpringPersistenceUnitInfo.addTransformer[0;39m - No LoadTimeWeaver setup: ignoring JPA class transformer 
+[1;35m04-02 10:05:42[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.getConnection[0;39m - HikariPool-1 - Starting... 
+[1;35m04-02 10:05:42[0;39m [[1;33mINFO [0;39m] [36mc.z.h.p.HikariPool.checkFailFast[0;39m - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6f65aa58 
+[1;35m04-02 10:05:42[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.getConnection[0;39m - HikariPool-1 - Start completed. 
+[1;35m04-02 10:05:44[0;39m [[1;33mINFO [0;39m] [36mo.h.e.t.j.p.i.JtaPlatformInitiator.initiateService[0;39m - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) 
+[1;35m04-02 10:05:46[0;39m [[1;33mINFO [0;39m] [36mo.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory[0;39m - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+[1;35m04-02 10:05:47[0;39m [[1;33mWARN [0;39m] [36mo.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor[0;39m - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+[1;35m04-02 10:05:47[0;39m [[1;33mWARN [0;39m] [36mo.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration.checkTemplateLocationExists[0;39m - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false) 
+[1;35m04-02 10:05:47[0;39m [[1;33mINFO [0;39m] [36mo.a.c.h.Http11NioProtocol.log[0;39m - Starting ProtocolHandler ["http-nio-8080"] 
+[1;35m04-02 10:05:47[0;39m [[1;33mINFO [0;39m] [36mo.s.b.w.e.t.TomcatWebServer.start[0;39m - Tomcat started on port 8080 (http) with context path '' 
+[1;35m04-02 10:05:47[0;39m [[1;33mINFO [0;39m] [36mc.e.a.AirbnbBackEndApplication.logStarted[0;39m - Started AirbnbBackEndApplication in 8.099 seconds (process running for 8.847) 
+[1;35m04-02 10:06:14[0;39m [[1;33mINFO [0;39m] [36mo.s.o.j.LocalContainerEntityManagerFactoryBean.destroy[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default' 
+[1;35m04-02 10:06:14[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.close[0;39m - HikariPool-1 - Shutdown initiated... 
+[1;35m04-02 10:06:14[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.close[0;39m - HikariPool-1 - Shutdown completed. 
+[1;35m04-02 10:06:18[0;39m [[1;33mINFO [0;39m] [36mc.e.a.AirbnbBackEndApplication.logStarting[0;39m - Starting AirbnbBackEndApplication using Java 17.0.10 with PID 14404 (C:\Users\NTX550\Desktop\Spring Boot\airbnb-clone-project-back\build\classes\java\main started by NTX550 in C:\Users\NTX550\Desktop\Spring Boot\airbnb-clone-project-back) 
+[1;35m04-02 10:06:18[0;39m [[1;33mINFO [0;39m] [36mc.e.a.AirbnbBackEndApplication.logStartupProfileInfo[0;39m - No active profile set, falling back to 1 default profile: "default" 
+[1;35m04-02 10:06:19[0;39m [[1;33mINFO [0;39m] [36mo.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn[0;39m - Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+[1;35m04-02 10:06:19[0;39m [[1;33mINFO [0;39m] [36mo.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn[0;39m - Finished Spring Data repository scanning in 66 ms. Found 4 JPA repository interfaces. 
+[1;35m04-02 10:06:20[0;39m [[1;33mINFO [0;39m] [36mo.s.b.w.e.t.TomcatWebServer.initialize[0;39m - Tomcat initialized with port 8080 (http) 
+[1;35m04-02 10:06:20[0;39m [[1;33mINFO [0;39m] [36mo.a.c.h.Http11NioProtocol.log[0;39m - Initializing ProtocolHandler ["http-nio-8080"] 
+[1;35m04-02 10:06:20[0;39m [[1;33mINFO [0;39m] [36mo.a.c.c.StandardService.log[0;39m - Starting service [Tomcat] 
+[1;35m04-02 10:06:20[0;39m [[1;33mINFO [0;39m] [36mo.a.c.c.StandardEngine.log[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.19] 
+[1;35m04-02 10:06:20[0;39m [[1;33mINFO [0;39m] [36mo.a.c.c.C.[.[.[/].log[0;39m - Initializing Spring embedded WebApplicationContext 
+[1;35m04-02 10:06:20[0;39m [[1;33mINFO [0;39m] [36mo.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 2017 ms 
+[1;35m04-02 10:06:20[0;39m [[1;33mINFO [0;39m] [36mo.h.j.i.u.LogHelper.logPersistenceUnitInformation[0;39m - HHH000204: Processing PersistenceUnitInfo [name: default] 
+[1;35m04-02 10:06:20[0;39m [[1;33mINFO [0;39m] [36mo.h.Version.logVersion[0;39m - HHH000412: Hibernate ORM core version 6.4.4.Final 
+[1;35m04-02 10:06:20[0;39m [[1;33mINFO [0;39m] [36mo.h.c.i.RegionFactoryInitiator.initiateService[0;39m - HHH000026: Second-level cache disabled 
+[1;35m04-02 10:06:21[0;39m [[1;33mINFO [0;39m] [36mo.s.o.j.p.SpringPersistenceUnitInfo.addTransformer[0;39m - No LoadTimeWeaver setup: ignoring JPA class transformer 
+[1;35m04-02 10:06:21[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.getConnection[0;39m - HikariPool-1 - Starting... 
+[1;35m04-02 10:06:21[0;39m [[1;33mINFO [0;39m] [36mc.z.h.p.HikariPool.checkFailFast[0;39m - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5aac6f9f 
+[1;35m04-02 10:06:21[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.getConnection[0;39m - HikariPool-1 - Start completed. 
+[1;35m04-02 10:06:23[0;39m [[1;33mINFO [0;39m] [36mo.h.e.t.j.p.i.JtaPlatformInitiator.initiateService[0;39m - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) 
+[1;35m04-02 10:06:23[0;39m [[1;33mINFO [0;39m] [36mo.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory[0;39m - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+[1;35m04-02 10:06:23[0;39m [[1;33mWARN [0;39m] [36mo.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor[0;39m - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+[1;35m04-02 10:06:24[0;39m [[1;33mWARN [0;39m] [36mo.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration.checkTemplateLocationExists[0;39m - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false) 
+[1;35m04-02 10:06:24[0;39m [[1;33mINFO [0;39m] [36mo.a.c.h.Http11NioProtocol.log[0;39m - Starting ProtocolHandler ["http-nio-8080"] 
+[1;35m04-02 10:06:24[0;39m [[1;33mINFO [0;39m] [36mo.s.b.w.e.t.TomcatWebServer.start[0;39m - Tomcat started on port 8080 (http) with context path '' 
+[1;35m04-02 10:06:24[0;39m [[1;33mINFO [0;39m] [36mc.e.a.AirbnbBackEndApplication.logStarted[0;39m - Started AirbnbBackEndApplication in 7.121 seconds (process running for 7.971) 
+[1;35m04-02 10:06:32[0;39m [[1;33mINFO [0;39m] [36mo.a.c.c.C.[.[.[/].log[0;39m - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+[1;35m04-02 10:06:32[0;39m [[1;33mINFO [0;39m] [36mo.s.w.s.DispatcherServlet.initServletBean[0;39m - Initializing Servlet 'dispatcherServlet' 
+[1;35m04-02 10:06:32[0;39m [[1;33mINFO [0;39m] [36mo.s.w.s.DispatcherServlet.initServletBean[0;39m - Completed initialization in 1 ms 
+[1;35m04-02 10:06:32[0;39m [[1;33mWARN [0;39m] [36mo.s.w.s.m.s.DefaultHandlerExceptionResolver.logException[0;39m - Resolved [org.springframework.web.bind.MissingPathVariableException: Required URI template variable 'UserId' for method parameter type Long is not present] 
+[1;35m04-02 10:07:30[0;39m [[1;33mINFO [0;39m] [36mo.s.o.j.LocalContainerEntityManagerFactoryBean.destroy[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default' 
+[1;35m04-02 10:07:30[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.close[0;39m - HikariPool-1 - Shutdown initiated... 
+[1;35m04-02 10:07:30[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.close[0;39m - HikariPool-1 - Shutdown completed. 
