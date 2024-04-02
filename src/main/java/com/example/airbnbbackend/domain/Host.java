@@ -1,6 +1,7 @@
 package com.example.airbnbbackend.domain;
 
 import jakarta.persistence.*;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
@@ -20,6 +21,7 @@ public class Host {
     @Column(nullable = false)
     private LocalDateTime registerAt;
 
+    @Getter
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private User user;

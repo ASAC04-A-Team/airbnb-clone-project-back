@@ -15,7 +15,7 @@ public class EachCategoryResponseDto {
 
     private String name;
 
-    private String image_url;
+    private String imageUrl;
 
     public static EachCategoryResponseDto of(Category category) {
         return new EachCategoryResponseDto(

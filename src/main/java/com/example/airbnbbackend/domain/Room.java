@@ -45,12 +45,14 @@ public class Room {
     @Column(nullable = false)
     private String introduction;
 
+    @Getter
     @Column(nullable = true)
     private Boolean gestPreference;
 
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
     private List<Likes> likesList = new ArrayList<>();
 
+    @Getter
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "host_id")
     private Host host;

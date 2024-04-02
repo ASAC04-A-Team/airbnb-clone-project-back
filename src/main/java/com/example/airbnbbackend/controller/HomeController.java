@@ -1,6 +1,6 @@
 package com.example.airbnbbackend.controller;
 
-import com.example.airbnbbackend.dto.responseDto.EachRoomItemsDto;
+import com.example.airbnbbackend.dto.responseDto.EachHomePageRoomItemsDto;
 import com.example.airbnbbackend.service.RoomItemsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,8 +17,8 @@ public class HomeController {
 
     private final RoomItemsService roomItemsService;
 
-    @GetMapping("/")
-    public List<EachRoomItemsDto> getEachRoomItems(){
-        return roomItemsService.findAllRoomForHomePage();
+    @GetMapping("/{categoryId}")
+    public List<EachHomePageRoomItemsDto> getEachRoomItems(@PathVariable("categoryId") Long categoryId ){
+        return roomItemsService.findAllRoomForHomePage(categoryId);
     }
 }
