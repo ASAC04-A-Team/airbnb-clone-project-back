@@ -6,7 +6,7 @@ INSERT INTO User (user_id, email, pw, profile_image_url, nickname, nation, addre
 
 INSERT INTO host (host_id, register_at, user_id, grade) VALUES (1, '2023-04-02 12:00:00', 2, '슈퍼호스트'),(2, '2023-04-02 12:00:00', 3, '호스트'),(3, '2023-04-02 12:00:00', 4, '호스트'),(4, '2023-04-02 12:00:00', 5, '슈퍼호스트');
 
-INSERT INTO user_interest (user_interest_id , user_id, hobby, residence) VALUES (1, 1, '넷플리스 보기', 'Seoul' ),  (2, 2, '영화 보기', 'Seoul' ),  (3, 3, '드라마 보기', 'Seoul' ), (4, 4, '독서', 'Seoul' ), (5, 5, '축구 보기', 'Seoul' ),(6, 1, '인프런 보기', 'Icheon' ),(7, 1, '꾸빼씨의 행복 여행 보기', 'Jeju' );
+INSERT INTO user_interest (user_interest_id , user_id, hobby, residence) VALUES (1, 1, '넷플리스 보기', 'Seoul' ),  (2, 2, '영화 보기', 'Seoul' ),  (3, 3, '드라마 보기', 'Seoul' ), (4, 4, '독서', 'Seoul' ), (5, 5, '축구 보기', 'Seoul' );
 
 INSERT INTO host_review (host_review_id, host_id, user_id, write_at, content) VALUES (1, 1, 1, '2023-04-02 12:00:00', '아주 깨끗하게 놀고가셨어요 다음에도 놀러오세요' ),
                                                                                      (2, 1, 2, '2023-04-02 12:00:00', '매번 찾아와주셔서 감사해요 또 놀러와요' ),
