@@ -41,9 +41,11 @@ public class User {
     private String emailAuthCode;
 
     @Column(nullable = false)
+    @Getter
     private LocalDateTime registerAt;
 
     @Column(nullable = false)
+    @Getter
     private Boolean isHost;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
