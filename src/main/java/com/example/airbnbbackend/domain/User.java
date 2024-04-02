@@ -48,6 +48,10 @@ public class User {
     @Getter
     private Boolean isHost;
 
+    @Column(nullable = false)
+    @Getter
+    private Boolean isAuth;
+
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Likes> likesList = new ArrayList<>();
 

@@ -73,5 +73,10 @@ public class UserService {
         return UserInformationResponseDto.of(user,hostReviewsNumsByUserId,sinceRegisterAt,separator);
     }
 
+    public Boolean findUserAuthInformation(Long userId){
+        User user = userRepository.findById(userId).orElse(null);
+
+        return user.getIsAuth();
+    }
 
 }
