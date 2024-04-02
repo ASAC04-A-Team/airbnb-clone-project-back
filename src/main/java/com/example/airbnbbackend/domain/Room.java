@@ -46,8 +46,8 @@ public class Room {
     private String introduction;
 
     @Getter
-    @Column(nullable = true)
-    private Boolean gestPreference;
+    @Column(nullable = false)
+    private Boolean guestPreference;
 
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
     private List<Likes> likesList = new ArrayList<>();
@@ -79,4 +79,9 @@ public class Room {
 
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
     private List<RoomAdvantage> roomAdvantage;
+
+    public String getHostName(){
+        return getHost().getUser().getNickname();
+    }
+
 }

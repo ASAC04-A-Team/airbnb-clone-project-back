@@ -20,7 +20,7 @@ public class EachHomePageRoomItemsDto {
 
     private String host;
 
-    private Boolean gestPreference;
+    private Boolean guestPreference;
 
     private String price;
 
@@ -28,16 +28,16 @@ public class EachHomePageRoomItemsDto {
 
     private String nation;
 
-    public static EachHomePageRoomItemsDto of(Room room){
-        List<String> homeRoomImageUrls = room.getRoomImages().stream().map(RoomImage::getImageUrl).toList();
+    public static EachHomePageRoomItemsDto of(RoomCategory roomCategory){
+        List<String> homeRoomImageUrls = roomCategory.getRoom().getRoomImages().stream().map(RoomImage::getImageUrl).toList();
         return new EachHomePageRoomItemsDto(
-                room.getId(),
+                roomCategory.getRoom().getId(),
                 homeRoomImageUrls,
-                room.getHost().getUser().getNickname(),
-                room.getGestPreference(),
-                room.getEachGuestPrice(),
-                room.getAddress(),
-                room.getNation()
+                roomCategory.getRoom().getHostName(),
+                roomCategory.getRoom().getGuestPreference(),
+                roomCategory.getRoom().getEachGuestPrice(),
+                roomCategory.getRoom().getAddress(),
+                roomCategory.getRoom().getNation()
         );
     }
 }
