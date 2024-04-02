@@ -11,11 +11,8 @@ import lombok.Getter;
 public class UserIntroductionResponseDto {
 
     private String nickname;
-
     private String hobby;
-
     private String residence;
-
 
     public static UserIntroductionResponseDto of(UserInterest userInterest) {
         return new UserIntroductionResponseDto(
