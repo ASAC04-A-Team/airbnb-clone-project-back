@@ -15,7 +15,7 @@ INSERT INTO host_review (host_review_id, host_id, user_id, write_at, content) VA
                                                                                      (5, 4, 5, '2023-04-02 12:00:00', '아주 깨끗하게 놀고가셨어요 다음에도 놀러오세요' );
 
 INSERT INTO room (
-                  room_id, host_id, each_guest_price, extra_pet_price,  address, introduction, description, name, nation, gest_preference
+                  room_id, host_id, each_guest_price, extra_pet_price,  address, introduction, description, name, nation, guest_preference
 ) VALUES (1, 1, '75,000', '20,000', 'Buk-myeon, Gapyeong-gun','Buk-myeon, Gapyeong-gun, 한국의 펜션' ,'[
         "가평의 푸르른 자연과 함께하는 공간",
         "안락함을 주는 우디한 객실과",

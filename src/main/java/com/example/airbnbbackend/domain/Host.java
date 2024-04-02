@@ -25,4 +25,9 @@ public class Host {
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private User user;
+
+    /* 연관관계 */
+    public String getHostName() {
+        return this.getUser().getNickname();
+    }
 }

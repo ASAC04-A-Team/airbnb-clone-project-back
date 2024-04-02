@@ -47,7 +47,7 @@ public class Room {
 
     @Getter
     @Column(nullable = true)
-    private Boolean gestPreference;
+    private Boolean guestPreference;
 
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
     private List<Likes> likesList = new ArrayList<>();
@@ -79,4 +79,13 @@ public class Room {
 
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
     private List<RoomAdvantage> roomAdvantage;
+
+    /* 연관관계 메서드 */
+    public List<String> getRoomImages() {
+        List<String> roomImages = new ArrayList<>();
+        for(RoomImage roomImage : this.roomImages) {
+            roomImages.add(roomImage.getImageUrl());
+        }
+        return roomImages;
+    }
 }
