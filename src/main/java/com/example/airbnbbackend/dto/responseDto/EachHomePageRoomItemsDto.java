@@ -28,16 +28,16 @@ public class EachHomePageRoomItemsDto {
 
     private String nation;
 
-    public static EachHomePageRoomItemsDto of(RoomCategory roomCategory){
-        List<String> homeRoomImageUrls = roomCategory.getRoom().getRoomImages().stream().map(RoomImage::getImageUrl).toList();
+    public static EachHomePageRoomItemsDto of(Room room){
+        List<String> homeRoomImageUrls = room.getRoomImages().stream().map(RoomImage::getImageUrl).toList();
         return new EachHomePageRoomItemsDto(
-                roomCategory.getRoom().getId(),
+                room.getId(),
                 homeRoomImageUrls,
-                roomCategory.getRoom().getHost().getUser().getNickname(),
-                roomCategory.getRoom().getGestPreference(),
-                roomCategory.getRoom().getEachGuestPrice(),
-                roomCategory.getRoom().getAddress(),
-                roomCategory.getRoom().getNation()
+                room.getHost().getUser().getNickname(),
+                room.getGestPreference(),
+                room.getEachGuestPrice(),
+                room.getAddress(),
+                room.getNation()
         );
     }
 }

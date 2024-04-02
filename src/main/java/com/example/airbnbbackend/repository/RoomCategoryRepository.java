@@ -7,7 +7,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface HomePageItemsRepository extends JpaRepository<RoomCategory, Long> {
-    List<RoomCategory> findAllByCategory_Id(Long categoryId);
+public interface RoomCategoryRepository extends JpaRepository<RoomCategory, Long> {
+    List<RoomCategory> findAllByCategoryId(Long categoryId);
+    // findAllByCategory_Id
 
 }
