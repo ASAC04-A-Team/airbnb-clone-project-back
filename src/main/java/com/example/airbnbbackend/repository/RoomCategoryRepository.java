@@ -10,6 +10,4 @@ import java.util.Optional;
 @Repository
 public interface RoomCategoryRepository extends JpaRepository<RoomCategory, Long> {
     Optional<List<RoomCategory>> findAllByCategoryId(Long categoryId);
-    // findAllByCategory_Id
-
 }

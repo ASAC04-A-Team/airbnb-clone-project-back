@@ -47,7 +47,7 @@ public class Room {
 
     @Getter
     @Column(nullable = true)
-    private Boolean gestPreference;
+    private Boolean guestPreference;
 
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
     private List<Likes> likesList = new ArrayList<>();
