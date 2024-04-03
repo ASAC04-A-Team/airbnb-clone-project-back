@@ -4,6 +4,7 @@ import com.example.airbnbbackend.dto.responseDto.UserHostReviewResponseDto;
 import com.example.airbnbbackend.dto.responseDto.UserInformationResponseDto;
 import com.example.airbnbbackend.dto.responseDto.UserIntroductionResponseDto;
 import com.example.airbnbbackend.service.UserService;
+import jakarta.persistence.Persistence;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;

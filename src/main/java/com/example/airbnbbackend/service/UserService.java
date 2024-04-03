@@ -51,18 +51,17 @@ public class UserService {
     public UserInformationResponseDto findAllUserInformation(Long userId) {
 
         User user = userRepository.findById(userId).orElse(null);
-
+        /** User의 Host 리뷰 수 */
         int hostReviewsNumsByUserId = userHostReviewsRepository.findHostReviewsNumsByUserId(userId);
+
         LocalDateTime registerAt = user.getRegisterAt();
         LocalDateTime nowRegisterAt = LocalDateTime.now();
         Period diff = Period.between(registerAt.toLocalDate(), nowRegisterAt.toLocalDate());
 
-        System.out.println("두 기간의 차이는 ->" + diff);
-
         int sinceRegisterAt;
         String separator;
-
         int year = diff.getYears();
+        /** User의 가입기간 */
         if (year != 0) {
             sinceRegisterAt = diff.getYears();
             separator = "year";
