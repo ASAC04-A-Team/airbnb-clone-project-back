@@ -1,22 +1,19 @@
 package com.example.airbnbbackend.dto.responseDto;
 
 import com.example.airbnbbackend.domain.Room;
-import com.example.airbnbbackend.domain.RoomImage;
-import com.example.airbnbbackend.domain.common.RoomCategory;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Getter
-public class EachHomePageRoomItemsDto {
+public class EachHomePageRoomItemsResponseDto {
 
     private Long id;
 
-    private List<String> slides;
+    private List<String> roomImageUrls;
 
     private String host;
 
@@ -28,13 +25,12 @@ public class EachHomePageRoomItemsDto {
 
     private String nation;
 
-    public static EachHomePageRoomItemsDto of(Room room){
-        List<String> homeRoomImageUrls = room.getRoomImages().stream().map(RoomImage::getImageUrl).toList();
-        return new EachHomePageRoomItemsDto(
+    public static EachHomePageRoomItemsResponseDto of(Room room){
+        return new EachHomePageRoomItemsResponseDto(
                 room.getId(),
-                homeRoomImageUrls,
-                room.getHost().getUser().getNickname(),
-                room.getGestPreference(),
+                room.getRoomImages(),
+                room.getHost().getHostName(),
+                room.getGuestPreference(),
                 room.getEachGuestPrice(),
                 room.getAddress(),
                 room.getNation()
