@@ -1,8 +1,6 @@
 package com.example.airbnbbackend.domain;
 
-import com.example.airbnbbackend.domain.common.RoomAdvantage;
-import com.example.airbnbbackend.domain.common.RoomCategory;
-import com.example.airbnbbackend.domain.common.RoomComfort;
+import com.example.airbnbbackend.domain.common.*;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,6 +18,7 @@ public class Room {
     @Column(name = "room_id")
     private Long id;
 
+    @Getter
     @Column(nullable = false)
     private String name;
 
@@ -32,6 +31,7 @@ public class Room {
     private String nation;
 
 
+    @Getter
     @Column(nullable = false, columnDefinition = "TEXT")
     private String description;
 
@@ -57,6 +57,7 @@ public class Room {
     @JoinColumn(name = "host_id")
     private Host host;
 
+    @Getter
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
     private List<Review> reviews = new ArrayList<>();
 
@@ -68,17 +69,20 @@ public class Room {
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
     private List<RoomOccupation> roomOccupations = new ArrayList<>();
 
+    @Getter
     @OneToOne(mappedBy = "room", cascade = CascadeType.ALL)
     private RoomDetail roomDetail;
 
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
     private List<RoomCategory> roomCategory;
 
+    @Getter
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
-    private List<RoomComfort> roomComfort;
+    private List<RoomComfort> roomComforts;
+
 
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
-    private List<RoomAdvantage> roomAdvantage;
+    private List<RoomAdvantage> roomAdvantages;
 
     /* 연관관계 메서드 */
     public List<String> getRoomImages() {
@@ -88,4 +92,27 @@ public class Room {
         }
         return roomImages;
     }
+
+    public List<Comfort> getRoomComforts() {
+        List<Comfort> roomComforts = new ArrayList<>();
+        for(RoomComfort roomComfort: this.roomComforts){
+            roomComforts.add(roomComfort.getComfort());
+            System.out.println(roomComfort.getComfort());
+        }
+
+        return roomComforts;
+    }
+
+    public List<Advantage> getRoomAdvantages() {
+        List<Advantage> roomAdvantages = new ArrayList<>();
+        for(RoomAdvantage roomAdvantage: this.roomAdvantages){
+            roomAdvantages.add(roomAdvantage.getAdvantage());
+        }
+
+        return roomAdvantages;
+    }
+
+
+
+
 }

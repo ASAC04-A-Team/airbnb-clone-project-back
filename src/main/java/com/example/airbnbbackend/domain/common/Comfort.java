@@ -1,6 +1,7 @@
 package com.example.airbnbbackend.domain.common;
 
 import jakarta.persistence.*;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
@@ -15,9 +16,11 @@ public class Comfort {
     @Column(name = "comfort_id")
     private Long id;
 
+    @Getter
     @Column(nullable = false)
     private String name;
 
+    @Getter
     @Column(nullable = false)
     private String imageUrl;
 
