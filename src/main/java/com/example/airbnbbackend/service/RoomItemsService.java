@@ -22,9 +22,9 @@ public class RoomItemsService {
      */
 
     public List<EachHomePageRoomItemsDto> findAllRoomForHomePage(Long categoryId){
-        List<RoomCategory> roomCategories = repository.findAllByCategory_Id(categoryId);
-       return roomCategories.stream().map((eachRoom) ->
-                EachHomePageRoomItemsDto.of(eachRoom)).toList();
+        List<RoomCategory> roomCategories = repository.findAllByCategoryId(categoryId);
+       return roomCategories.stream().map(EachHomePageRoomItemsDto::of).toList();
+
     }
 
 }

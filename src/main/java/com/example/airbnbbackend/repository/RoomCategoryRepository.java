@@ -8,7 +8,7 @@ import java.util.List;
 
 @Repository
 public interface RoomCategoryRepository extends JpaRepository<RoomCategory, Long> {
-    List<RoomCategory> findAllByCategory_Id(Long categoryId);
+    List<RoomCategory> findAllByCategoryId(Long categoryId);
     // findAllByCategory_Id
 
 }

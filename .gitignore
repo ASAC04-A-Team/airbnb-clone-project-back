@@ -38,8 +38,5 @@ out/
 
 *.yml
 
-<<<<<<< HEAD
-/logs
-=======
-logs/
->>>>>>> feat/roomcomfortAPI
+logs.DS_Store
+
