@@ -1,11 +1,14 @@
 package com.example.airbnbbackend.service;
 
+import com.example.airbnbbackend.domain.Host;
 import com.example.airbnbbackend.domain.Room;
 import com.example.airbnbbackend.domain.common.RoomAdvantage;
 import com.example.airbnbbackend.domain.common.RoomComfort;
+import com.example.airbnbbackend.dto.responseDto.EachHostResponseDto;
 import com.example.airbnbbackend.dto.responseDto.EachRoomAdvantageResponseDto;
 import com.example.airbnbbackend.dto.responseDto.EachRoomComfortResponseDto;
 import com.example.airbnbbackend.dto.responseDto.EachRoomResponseDto;
+import com.example.airbnbbackend.repository.HostRepository;
 import com.example.airbnbbackend.repository.RoomAdvantageRepository;
 import com.example.airbnbbackend.repository.RoomComfortRepository;
 import com.example.airbnbbackend.repository.RoomRepository;
@@ -21,6 +24,7 @@ public class RoomDetailService {
     private final RoomRepository roomRepository;
     private final RoomComfortRepository roomComfortRepository;
     private final RoomAdvantageRepository roomAdventageRepository;
+    private final HostRepository hostRepository;
 
     public EachRoomResponseDto getRoomId(Long roomId) {
         Room roomDetail = roomRepository.getById(roomId);
@@ -41,6 +45,11 @@ public class RoomDetailService {
                 EachRoomAdvantageResponseDto.of(eachRoomAdvantage.getAdvantage())
         ).toList();
 
+    }
+
+    public EachHostResponseDto getRoomHost(Long roomId){
+        Host host = hostRepository.findHostByRoomId(roomId);
+        return EachHostResponseDto.of(host);
     }
 }
 

@@ -27,7 +27,7 @@ public class EachRoomResponseDto {
 
     private Integer bathroomCount;
 
-    private Integer bedRoomCount;
+    private Integer bedroomCount;
 
     private Integer bedCount;
 
@@ -37,9 +37,13 @@ public class EachRoomResponseDto {
 
     private String hostName;
 
+    private String introduction;
+
     private String price;
 
     private String description;
+
+    private boolean guestPreference;
 
 
 
@@ -57,9 +61,10 @@ public class EachRoomResponseDto {
                 room.getRoomDetail().getCapacity(),
                 room.getReviews().stream().count(),
                 room.getHost().getHostName(),
+                room.getIntroduction(),
                 room.getEachGuestPrice(),
-                room.getDescription()
-
+                room.getDescription(),
+                room.getGuestPreference()
         );
     }
 }

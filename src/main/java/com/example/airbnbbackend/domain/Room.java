@@ -42,6 +42,7 @@ public class Room {
     @Column(nullable = false)
     private String extraPetPrice;
 
+    @Getter
     @Column(nullable = false)
     private String introduction;
 

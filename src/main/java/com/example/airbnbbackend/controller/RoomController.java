@@ -1,5 +1,6 @@
 package com.example.airbnbbackend.controller;
 
+import com.example.airbnbbackend.dto.responseDto.EachHostResponseDto;
 import com.example.airbnbbackend.dto.responseDto.EachRoomAdvantageResponseDto;
 import com.example.airbnbbackend.dto.responseDto.EachRoomComfortResponseDto;
 import com.example.airbnbbackend.dto.responseDto.EachRoomResponseDto;
@@ -43,6 +44,11 @@ public class RoomController {
     public List<EachRoomAdvantageResponseDto> getRoomAdvantage(@PathVariable Long roomId){
 
         return roomDetailService.getRoomAdvantage(roomId);
+    }
+
+    @GetMapping("/roomHost/{roomId}")
+    public EachHostResponseDto getRoomHost(@PathVariable Long roomId){
+        return roomDetailService.getRoomHost(roomId);
     }
 
     /**
