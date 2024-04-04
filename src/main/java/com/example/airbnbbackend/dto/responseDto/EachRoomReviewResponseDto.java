@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 import java.time.LocalDateTime;
+import java.util.Optional;
 
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Getter
@@ -27,14 +28,16 @@ public class EachRoomReviewResponseDto {
     private String nation;
 
     public static EachRoomReviewResponseDto of(Review review) {
+        User user = Optional.ofNullable(review.getUser())
+                .orElseThrow(RuntimeException::new);
         return new EachRoomReviewResponseDto(
                 review.getId(),
                 review.getContent(),
                 review.getWriteAt(),
-                review.getUser().getNickname(),
-                review.getUser().getProfileImageUrl(),
+                user.getNickname(),
+                user.getProfileImageUrl(),
                 review.getScore(),
-                review.getUser().getNation()
+                user.getNation()
         );
     }
 }

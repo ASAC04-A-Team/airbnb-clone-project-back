@@ -14,8 +14,12 @@ import com.example.airbnbbackend.repository.RoomComfortRepository;
 import com.example.airbnbbackend.repository.RoomRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -27,29 +31,45 @@ public class RoomDetailService {
     private final HostRepository hostRepository;
 
     public EachRoomResponseDto getRoomId(Long roomId) {
-        Room roomDetail = roomRepository.getById(roomId);
-        return EachRoomResponseDto.of(roomDetail);
+        Optional<Room> roomDetail = roomRepository.findById(roomId);
+        if(roomDetail.isPresent()){
+            throw new RuntimeException("해당 방을 찾을 수 없습니다.");
+        }
+        return EachRoomResponseDto.of(roomDetail.get());
     }
 
 
     public List<EachRoomComfortResponseDto> getRoomComfort(Long roomId) {
-        List<RoomComfort> roomComfort = roomComfortRepository.findAllByRoomId(roomId);
-        return roomComfort.stream().map((eacahRoomComfort)->
-             EachRoomComfortResponseDto.of(eacahRoomComfort.getComfort())
-        ).toList();
+        List<RoomComfort> roomComfort = roomComfortRepository.findAllByRoomId(roomId).orElse(Collections.emptyList());
+
+        if(CollectionUtils.isEmpty(roomComfort)){
+            throw new RuntimeException("해당 Room: " + roomId + "은 편의시설이 존재하지 않습니다.");
+        }
+        return roomComfort.stream()
+                .map((eacahRoomComfort)->
+                        EachRoomComfortResponseDto.of(eacahRoomComfort.getComfort())).
+                toList();
     }
 
     public List<EachRoomAdvantageResponseDto> getRoomAdvantage(Long roomId){
-        List<RoomAdvantage> roomAdvantage = roomAdventageRepository.findAllByRoomId(roomId);
-        return  roomAdvantage.stream().map((eachRoomAdvantage)->
-                EachRoomAdvantageResponseDto.of(eachRoomAdvantage.getAdvantage())
-        ).toList();
+        List<RoomAdvantage> roomAdvantage = roomAdventageRepository.findAllByRoomId(roomId).orElse(Collections.emptyList());
+
+        if(CollectionUtils.isEmpty(roomAdvantage)){
+            throw new RuntimeException("해당 Room: " + roomId + "은 장점이 존재하지 않습니다.");
+        }
+        return  roomAdvantage.stream()
+                .map((eachRoomAdvantage)->
+                EachRoomAdvantageResponseDto.of(eachRoomAdvantage.getAdvantage()))
+                .toList();
 
     }
 
     public EachHostResponseDto getRoomHost(Long roomId){
-        Host host = hostRepository.findHostByRoomId(roomId);
-        return EachHostResponseDto.of(host);
+        Optional<Host> host = hostRepository.findHostByRoomId(roomId);
+        if(host.isPresent()){
+            throw new RuntimeException("해당 Room : " + roomId + "은 호스트가 존재하지 않습니다");
+        }
+        return EachHostResponseDto.of(host.get());
     }
 }
 
