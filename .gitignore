@@ -36,6 +36,8 @@ out/
 ### VS Code ###
 .vscode/
 
+*.log
+
 *.yml
 
-logs.DS_Store
+logs
