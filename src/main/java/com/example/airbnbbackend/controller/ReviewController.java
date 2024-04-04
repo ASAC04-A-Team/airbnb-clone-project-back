@@ -1,5 +1,6 @@
 package com.example.airbnbbackend.controller;
 
+import com.example.airbnbbackend.dto.responseDto.EachRoomReiviewSummaryResponseDto;
 import com.example.airbnbbackend.dto.responseDto.EachRoomReviewResponseDto;
 import com.example.airbnbbackend.service.ReviewService;
 import lombok.RequiredArgsConstructor;
@@ -25,7 +26,12 @@ public class ReviewController {
      * @return 리뷰 리스트
      */
     @GetMapping("/{roomId}")
-    public List<EachRoomReviewResponseDto> getRoomReviews(@PathVariable("roomId") Long roomId) {
+    public List<EachRoomReviewResponseDto> getRoomReviews(@PathVariable Long roomId) {
         return reviewService.findAllRoomReviews(roomId);
+    }
+
+    @GetMapping("/reviewsStatistic/{roomId}")
+    public EachRoomReiviewSummaryResponseDto getRoomReviewStatistic(@PathVariable Long roomId){
+        return reviewService.findAllRoomReviewsStatistics(roomId);
     }
 }

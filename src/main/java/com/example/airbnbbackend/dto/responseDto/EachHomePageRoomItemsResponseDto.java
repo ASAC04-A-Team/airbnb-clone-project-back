@@ -1,11 +1,14 @@
 package com.example.airbnbbackend.dto.responseDto;
 
+import com.example.airbnbbackend.domain.Host;
 import com.example.airbnbbackend.domain.Room;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+import javax.swing.text.html.Option;
 import java.util.List;
+import java.util.Optional;
 
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Getter
@@ -26,10 +29,11 @@ public class EachHomePageRoomItemsResponseDto {
     private String nation;
 
     public static EachHomePageRoomItemsResponseDto of(Room room){
+        Host host = Optional.ofNullable(room.getHost()).orElseThrow(RuntimeException::new);
         return new EachHomePageRoomItemsResponseDto(
                 room.getId(),
                 room.getRoomImages(),
-                room.getHost().getHostName(),
+                host.getHostName(),
                 room.getGuestPreference(),
                 room.getEachGuestPrice(),
                 room.getAddress(),
