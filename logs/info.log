@@ -16799,3 +16799,118 @@ Caused by: java.sql.SQLSyntaxErrorException: Can't DROP 'FKlr95rkpr5hl4yxcxn24pe
 [1;35m04-04 20:31:20[0;39m [[1;33mINFO [0;39m] [36mo.s.o.j.LocalContainerEntityManagerFactoryBean.destroy[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default' 
 [1;35m04-04 20:31:20[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.close[0;39m - HikariPool-1 - Shutdown initiated... 
 [1;35m04-04 20:31:20[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.close[0;39m - HikariPool-1 - Shutdown completed. 
+[1;35m04-04 21:02:35[0;39m [[1;33mINFO [0;39m] [36mc.e.a.AirbnbBackEndApplication.logStarting[0;39m - Starting AirbnbBackEndApplication using Java 21.0.2 with PID 66879 (/Users/hyeonjun/Develop/airbnb-clone-project-back/build/classes/java/main started by hyeonjun in /Users/hyeonjun/Develop/airbnb-clone-project-back) 
+[1;35m04-04 21:02:35[0;39m [[1;33mINFO [0;39m] [36mc.e.a.AirbnbBackEndApplication.logStartupProfileInfo[0;39m - No active profile set, falling back to 1 default profile: "default" 
+[1;35m04-04 21:02:35[0;39m [[1;33mINFO [0;39m] [36mo.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn[0;39m - Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+[1;35m04-04 21:02:35[0;39m [[1;33mINFO [0;39m] [36mo.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn[0;39m - Finished Spring Data repository scanning in 19 ms. Found 7 JPA repository interfaces. 
+[1;35m04-04 21:02:35[0;39m [[1;33mINFO [0;39m] [36mo.s.b.w.e.t.TomcatWebServer.initialize[0;39m - Tomcat initialized with port 8080 (http) 
+[1;35m04-04 21:02:36[0;39m [[1;33mINFO [0;39m] [36mo.a.c.h.Http11NioProtocol.log[0;39m - Initializing ProtocolHandler ["http-nio-8080"] 
+[1;35m04-04 21:02:36[0;39m [[1;33mINFO [0;39m] [36mo.a.c.c.StandardService.log[0;39m - Starting service [Tomcat] 
+[1;35m04-04 21:02:36[0;39m [[1;33mINFO [0;39m] [36mo.a.c.c.StandardEngine.log[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.19] 
+[1;35m04-04 21:02:36[0;39m [[1;33mINFO [0;39m] [36mo.a.c.c.C.[.[.[/].log[0;39m - Initializing Spring embedded WebApplicationContext 
+[1;35m04-04 21:02:36[0;39m [[1;33mINFO [0;39m] [36mo.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 511 ms 
+[1;35m04-04 21:02:36[0;39m [[1;33mINFO [0;39m] [36mo.h.j.i.u.LogHelper.logPersistenceUnitInformation[0;39m - HHH000204: Processing PersistenceUnitInfo [name: default] 
+[1;35m04-04 21:02:36[0;39m [[1;33mINFO [0;39m] [36mo.h.Version.logVersion[0;39m - HHH000412: Hibernate ORM core version 6.4.4.Final 
+[1;35m04-04 21:02:36[0;39m [[1;33mINFO [0;39m] [36mo.h.c.i.RegionFactoryInitiator.initiateService[0;39m - HHH000026: Second-level cache disabled 
+[1;35m04-04 21:02:36[0;39m [[1;33mINFO [0;39m] [36mo.s.o.j.p.SpringPersistenceUnitInfo.addTransformer[0;39m - No LoadTimeWeaver setup: ignoring JPA class transformer 
+[1;35m04-04 21:02:36[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.getConnection[0;39m - HikariPool-1 - Starting... 
+[1;35m04-04 21:02:36[0;39m [[1;33mINFO [0;39m] [36mc.z.h.p.HikariPool.checkFailFast[0;39m - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6c1e40d9 
+[1;35m04-04 21:02:36[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.getConnection[0;39m - HikariPool-1 - Start completed. 
+[1;35m04-04 21:02:36[0;39m [[1;33mINFO [0;39m] [36mo.h.e.t.j.p.i.JtaPlatformInitiator.initiateService[0;39m - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) 
+[1;35m04-04 21:02:36[0;39m [[1;33mINFO [0;39m] [36mo.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory[0;39m - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+[1;35m04-04 21:02:37[0;39m [[1;33mWARN [0;39m] [36mo.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor[0;39m - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+[1;35m04-04 21:02:37[0;39m [[1;33mWARN [0;39m] [36mo.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration.checkTemplateLocationExists[0;39m - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false) 
+[1;35m04-04 21:02:37[0;39m [[1;33mINFO [0;39m] [36mo.a.c.h.Http11NioProtocol.log[0;39m - Starting ProtocolHandler ["http-nio-8080"] 
+[1;35m04-04 21:02:37[0;39m [[1;33mINFO [0;39m] [36mo.s.b.w.e.t.TomcatWebServer.start[0;39m - Tomcat started on port 8080 (http) with context path '' 
+[1;35m04-04 21:02:37[0;39m [[1;33mINFO [0;39m] [36mc.e.a.AirbnbBackEndApplication.logStarted[0;39m - Started AirbnbBackEndApplication in 2.081 seconds (process running for 2.343) 
+[1;35m04-04 21:02:57[0;39m [[1;33mINFO [0;39m] [36mo.s.o.j.LocalContainerEntityManagerFactoryBean.destroy[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default' 
+[1;35m04-04 21:02:57[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.close[0;39m - HikariPool-1 - Shutdown initiated... 
+[1;35m04-04 21:02:57[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.close[0;39m - HikariPool-1 - Shutdown completed. 
+[1;35m04-04 21:02:58[0;39m [[1;33mINFO [0;39m] [36mc.e.a.AirbnbBackEndApplication.logStarting[0;39m - Starting AirbnbBackEndApplication using Java 21.0.2 with PID 66885 (/Users/hyeonjun/Develop/airbnb-clone-project-back/build/classes/java/main started by hyeonjun in /Users/hyeonjun/Develop/airbnb-clone-project-back) 
+[1;35m04-04 21:02:58[0;39m [[1;33mINFO [0;39m] [36mc.e.a.AirbnbBackEndApplication.logStartupProfileInfo[0;39m - No active profile set, falling back to 1 default profile: "default" 
+[1;35m04-04 21:02:59[0;39m [[1;33mINFO [0;39m] [36mo.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn[0;39m - Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+[1;35m04-04 21:02:59[0;39m [[1;33mINFO [0;39m] [36mo.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn[0;39m - Finished Spring Data repository scanning in 21 ms. Found 7 JPA repository interfaces. 
+[1;35m04-04 21:02:59[0;39m [[1;33mINFO [0;39m] [36mo.s.b.w.e.t.TomcatWebServer.initialize[0;39m - Tomcat initialized with port 8080 (http) 
+[1;35m04-04 21:02:59[0;39m [[1;33mINFO [0;39m] [36mo.a.c.h.Http11NioProtocol.log[0;39m - Initializing ProtocolHandler ["http-nio-8080"] 
+[1;35m04-04 21:02:59[0;39m [[1;33mINFO [0;39m] [36mo.a.c.c.StandardService.log[0;39m - Starting service [Tomcat] 
+[1;35m04-04 21:02:59[0;39m [[1;33mINFO [0;39m] [36mo.a.c.c.StandardEngine.log[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.19] 
+[1;35m04-04 21:02:59[0;39m [[1;33mINFO [0;39m] [36mo.a.c.c.C.[.[.[/].log[0;39m - Initializing Spring embedded WebApplicationContext 
+[1;35m04-04 21:02:59[0;39m [[1;33mINFO [0;39m] [36mo.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 510 ms 
+[1;35m04-04 21:02:59[0;39m [[1;33mINFO [0;39m] [36mo.h.j.i.u.LogHelper.logPersistenceUnitInformation[0;39m - HHH000204: Processing PersistenceUnitInfo [name: default] 
+[1;35m04-04 21:02:59[0;39m [[1;33mINFO [0;39m] [36mo.h.Version.logVersion[0;39m - HHH000412: Hibernate ORM core version 6.4.4.Final 
+[1;35m04-04 21:02:59[0;39m [[1;33mINFO [0;39m] [36mo.h.c.i.RegionFactoryInitiator.initiateService[0;39m - HHH000026: Second-level cache disabled 
+[1;35m04-04 21:02:59[0;39m [[1;33mINFO [0;39m] [36mo.s.o.j.p.SpringPersistenceUnitInfo.addTransformer[0;39m - No LoadTimeWeaver setup: ignoring JPA class transformer 
+[1;35m04-04 21:02:59[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.getConnection[0;39m - HikariPool-1 - Starting... 
+[1;35m04-04 21:02:59[0;39m [[1;33mINFO [0;39m] [36mc.z.h.p.HikariPool.checkFailFast[0;39m - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b50c21 
+[1;35m04-04 21:02:59[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.getConnection[0;39m - HikariPool-1 - Start completed. 
+[1;35m04-04 21:03:00[0;39m [[1;33mINFO [0;39m] [36mo.h.e.t.j.p.i.JtaPlatformInitiator.initiateService[0;39m - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) 
+[1;35m04-04 21:03:00[0;39m [[1;33mINFO [0;39m] [36mo.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory[0;39m - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+[1;35m04-04 21:03:00[0;39m [[1;33mWARN [0;39m] [36mo.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor[0;39m - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+[1;35m04-04 21:03:00[0;39m [[1;33mWARN [0;39m] [36mo.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration.checkTemplateLocationExists[0;39m - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false) 
+[1;35m04-04 21:03:00[0;39m [[1;33mINFO [0;39m] [36mo.a.c.h.Http11NioProtocol.log[0;39m - Starting ProtocolHandler ["http-nio-8080"] 
+[1;35m04-04 21:03:00[0;39m [[1;33mINFO [0;39m] [36mo.s.b.w.e.t.TomcatWebServer.start[0;39m - Tomcat started on port 8080 (http) with context path '' 
+[1;35m04-04 21:03:00[0;39m [[1;33mINFO [0;39m] [36mc.e.a.AirbnbBackEndApplication.logStarted[0;39m - Started AirbnbBackEndApplication in 2.017 seconds (process running for 2.246) 
+[1;35m04-04 21:04:02[0;39m [[1;33mINFO [0;39m] [36mo.a.c.c.C.[.[.[/].log[0;39m - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+[1;35m04-04 21:04:02[0;39m [[1;33mINFO [0;39m] [36mo.s.w.s.DispatcherServlet.initServletBean[0;39m - Initializing Servlet 'dispatcherServlet' 
+[1;35m04-04 21:04:02[0;39m [[1;33mINFO [0;39m] [36mo.s.w.s.DispatcherServlet.initServletBean[0;39m - Completed initialization in 3 ms 
+[1;35m04-04 21:04:06[0;39m [[1;33mERROR[0;39m] [36mc.e.a.c.HomeController.getEachRoomItems[0;39m - 카테고리Id: 4에 맞는 방을 찾을 수 없습니다. 
+[1;35m04-04 21:04:06[0;39m [[1;33mERROR[0;39m] [36mc.e.a.c.e.CustomExceptionHandler.handleNotFoundException[0;39m - Advice 내 HandleException 호출, /api/home/4, RoomCategory Domain Exception. 카테고리Id: 4에 맞는 방을 찾을 수 없습니다. 
+[1;35m04-04 21:04:35[0;39m [[1;33mINFO [0;39m] [36mo.s.o.j.LocalContainerEntityManagerFactoryBean.destroy[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default' 
+[1;35m04-04 21:04:35[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.close[0;39m - HikariPool-1 - Shutdown initiated... 
+[1;35m04-04 21:04:35[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.close[0;39m - HikariPool-1 - Shutdown completed. 
+[1;35m04-04 21:04:37[0;39m [[1;33mINFO [0;39m] [36mc.e.a.AirbnbBackEndApplication.logStarting[0;39m - Starting AirbnbBackEndApplication using Java 21.0.2 with PID 66954 (/Users/hyeonjun/Develop/airbnb-clone-project-back/build/classes/java/main started by hyeonjun in /Users/hyeonjun/Develop/airbnb-clone-project-back) 
+[1;35m04-04 21:04:37[0;39m [[1;33mINFO [0;39m] [36mc.e.a.AirbnbBackEndApplication.logStartupProfileInfo[0;39m - No active profile set, falling back to 1 default profile: "default" 
+[1;35m04-04 21:04:37[0;39m [[1;33mINFO [0;39m] [36mo.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn[0;39m - Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+[1;35m04-04 21:04:37[0;39m [[1;33mINFO [0;39m] [36mo.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn[0;39m - Finished Spring Data repository scanning in 29 ms. Found 7 JPA repository interfaces. 
+[1;35m04-04 21:04:37[0;39m [[1;33mINFO [0;39m] [36mo.s.b.w.e.t.TomcatWebServer.initialize[0;39m - Tomcat initialized with port 8080 (http) 
+[1;35m04-04 21:04:37[0;39m [[1;33mINFO [0;39m] [36mo.a.c.h.Http11NioProtocol.log[0;39m - Initializing ProtocolHandler ["http-nio-8080"] 
+[1;35m04-04 21:04:37[0;39m [[1;33mINFO [0;39m] [36mo.a.c.c.StandardService.log[0;39m - Starting service [Tomcat] 
+[1;35m04-04 21:04:37[0;39m [[1;33mINFO [0;39m] [36mo.a.c.c.StandardEngine.log[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.19] 
+[1;35m04-04 21:04:37[0;39m [[1;33mINFO [0;39m] [36mo.a.c.c.C.[.[.[/].log[0;39m - Initializing Spring embedded WebApplicationContext 
+[1;35m04-04 21:04:37[0;39m [[1;33mINFO [0;39m] [36mo.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 545 ms 
+[1;35m04-04 21:04:37[0;39m [[1;33mINFO [0;39m] [36mo.h.j.i.u.LogHelper.logPersistenceUnitInformation[0;39m - HHH000204: Processing PersistenceUnitInfo [name: default] 
+[1;35m04-04 21:04:37[0;39m [[1;33mINFO [0;39m] [36mo.h.Version.logVersion[0;39m - HHH000412: Hibernate ORM core version 6.4.4.Final 
+[1;35m04-04 21:04:37[0;39m [[1;33mINFO [0;39m] [36mo.h.c.i.RegionFactoryInitiator.initiateService[0;39m - HHH000026: Second-level cache disabled 
+[1;35m04-04 21:04:37[0;39m [[1;33mINFO [0;39m] [36mo.s.o.j.p.SpringPersistenceUnitInfo.addTransformer[0;39m - No LoadTimeWeaver setup: ignoring JPA class transformer 
+[1;35m04-04 21:04:37[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.getConnection[0;39m - HikariPool-1 - Starting... 
+[1;35m04-04 21:04:37[0;39m [[1;33mINFO [0;39m] [36mc.z.h.p.HikariPool.checkFailFast[0;39m - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6c1e40d9 
+[1;35m04-04 21:04:37[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.getConnection[0;39m - HikariPool-1 - Start completed. 
+[1;35m04-04 21:04:38[0;39m [[1;33mINFO [0;39m] [36mo.h.e.t.j.p.i.JtaPlatformInitiator.initiateService[0;39m - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) 
+[1;35m04-04 21:04:38[0;39m [[1;33mINFO [0;39m] [36mo.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory[0;39m - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+[1;35m04-04 21:04:38[0;39m [[1;33mWARN [0;39m] [36mo.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor[0;39m - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+[1;35m04-04 21:04:38[0;39m [[1;33mWARN [0;39m] [36mo.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration.checkTemplateLocationExists[0;39m - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false) 
+[1;35m04-04 21:04:38[0;39m [[1;33mINFO [0;39m] [36mo.s.b.w.e.t.TomcatWebServer.start[0;39m - Tomcat started on port 8080 (http) with context path '' 
+[1;35m04-04 21:04:38[0;39m [[1;33mINFO [0;39m] [36mc.e.a.AirbnbBackEndApplication.logStarted[0;39m - Started AirbnbBackEndApplication in 2.1 seconds (process running for 2.324) 
+[1;35m04-04 21:04:38[0;39m [[1;33mINFO [0;39m] [36mo.s.o.j.LocalContainerEntityManagerFactoryBean.destroy[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default' 
+[1;35m04-04 21:04:38[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.close[0;39m - HikariPool-1 - Shutdown initiated... 
+[1;35m04-04 21:04:38[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.close[0;39m - HikariPool-1 - Shutdown completed. 
+[1;35m04-04 21:04:40[0;39m [[1;33mINFO [0;39m] [36mc.e.a.AirbnbBackEndApplication.logStarting[0;39m - Starting AirbnbBackEndApplication using Java 21.0.2 with PID 66966 (/Users/hyeonjun/Develop/airbnb-clone-project-back/build/classes/java/main started by hyeonjun in /Users/hyeonjun/Develop/airbnb-clone-project-back) 
+[1;35m04-04 21:04:40[0;39m [[1;33mINFO [0;39m] [36mc.e.a.AirbnbBackEndApplication.logStartupProfileInfo[0;39m - No active profile set, falling back to 1 default profile: "default" 
+[1;35m04-04 21:04:40[0;39m [[1;33mINFO [0;39m] [36mo.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn[0;39m - Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+[1;35m04-04 21:04:40[0;39m [[1;33mINFO [0;39m] [36mo.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn[0;39m - Finished Spring Data repository scanning in 21 ms. Found 7 JPA repository interfaces. 
+[1;35m04-04 21:04:40[0;39m [[1;33mINFO [0;39m] [36mo.s.b.w.e.t.TomcatWebServer.initialize[0;39m - Tomcat initialized with port 8080 (http) 
+[1;35m04-04 21:04:40[0;39m [[1;33mINFO [0;39m] [36mo.a.c.h.Http11NioProtocol.log[0;39m - Initializing ProtocolHandler ["http-nio-8080"] 
+[1;35m04-04 21:04:40[0;39m [[1;33mINFO [0;39m] [36mo.a.c.c.StandardService.log[0;39m - Starting service [Tomcat] 
+[1;35m04-04 21:04:40[0;39m [[1;33mINFO [0;39m] [36mo.a.c.c.StandardEngine.log[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.19] 
+[1;35m04-04 21:04:40[0;39m [[1;33mINFO [0;39m] [36mo.a.c.c.C.[.[.[/].log[0;39m - Initializing Spring embedded WebApplicationContext 
+[1;35m04-04 21:04:40[0;39m [[1;33mINFO [0;39m] [36mo.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 488 ms 
+[1;35m04-04 21:04:40[0;39m [[1;33mINFO [0;39m] [36mo.h.j.i.u.LogHelper.logPersistenceUnitInformation[0;39m - HHH000204: Processing PersistenceUnitInfo [name: default] 
+[1;35m04-04 21:04:40[0;39m [[1;33mINFO [0;39m] [36mo.h.Version.logVersion[0;39m - HHH000412: Hibernate ORM core version 6.4.4.Final 
+[1;35m04-04 21:04:40[0;39m [[1;33mINFO [0;39m] [36mo.h.c.i.RegionFactoryInitiator.initiateService[0;39m - HHH000026: Second-level cache disabled 
+[1;35m04-04 21:04:40[0;39m [[1;33mINFO [0;39m] [36mo.s.o.j.p.SpringPersistenceUnitInfo.addTransformer[0;39m - No LoadTimeWeaver setup: ignoring JPA class transformer 
+[1;35m04-04 21:04:40[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.getConnection[0;39m - HikariPool-1 - Starting... 
+[1;35m04-04 21:04:40[0;39m [[1;33mINFO [0;39m] [36mc.z.h.p.HikariPool.checkFailFast[0;39m - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@68c4db77 
+[1;35m04-04 21:04:40[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.getConnection[0;39m - HikariPool-1 - Start completed. 
+[1;35m04-04 21:04:41[0;39m [[1;33mINFO [0;39m] [36mo.h.e.t.j.p.i.JtaPlatformInitiator.initiateService[0;39m - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) 
+[1;35m04-04 21:04:41[0;39m [[1;33mINFO [0;39m] [36mo.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory[0;39m - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+[1;35m04-04 21:04:41[0;39m [[1;33mWARN [0;39m] [36mo.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor[0;39m - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+[1;35m04-04 21:04:41[0;39m [[1;33mWARN [0;39m] [36mo.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration.checkTemplateLocationExists[0;39m - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false) 
+[1;35m04-04 21:04:41[0;39m [[1;33mINFO [0;39m] [36mo.a.c.h.Http11NioProtocol.log[0;39m - Starting ProtocolHandler ["http-nio-8080"] 
+[1;35m04-04 21:04:41[0;39m [[1;33mINFO [0;39m] [36mo.s.b.w.e.t.TomcatWebServer.start[0;39m - Tomcat started on port 8080 (http) with context path '' 
+[1;35m04-04 21:04:41[0;39m [[1;33mINFO [0;39m] [36mc.e.a.AirbnbBackEndApplication.logStarted[0;39m - Started AirbnbBackEndApplication in 1.969 seconds (process running for 2.175) 
+[1;35m04-04 21:04:46[0;39m [[1;33mINFO [0;39m] [36mo.a.c.c.C.[.[.[/].log[0;39m - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+[1;35m04-04 21:04:46[0;39m [[1;33mINFO [0;39m] [36mo.s.w.s.DispatcherServlet.initServletBean[0;39m - Initializing Servlet 'dispatcherServlet' 
+[1;35m04-04 21:04:46[0;39m [[1;33mINFO [0;39m] [36mo.s.w.s.DispatcherServlet.initServletBean[0;39m - Completed initialization in 1 ms 
+[1;35m04-04 21:05:06[0;39m [[1;33mINFO [0;39m] [36mo.s.o.j.LocalContainerEntityManagerFactoryBean.destroy[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default' 
+[1;35m04-04 21:05:06[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.close[0;39m - HikariPool-1 - Shutdown initiated... 
+[1;35m04-04 21:05:06[0;39m [[1;33mINFO [0;39m] [36mc.z.h.HikariDataSource.close[0;39m - HikariPool-1 - Shutdown completed. 
