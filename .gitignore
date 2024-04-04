@@ -38,5 +38,7 @@ out/
 
 *.yml
 
+*.log
+
 logs.DS_Store
 
