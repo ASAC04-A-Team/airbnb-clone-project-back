@@ -7,6 +7,7 @@ import com.example.airbnbbackend.dto.responseDto.EachRoomResponseDto;
 import com.example.airbnbbackend.service.RoomDetailService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,9 +29,9 @@ public class RoomController {
      * @return
      */
     @GetMapping("/roomDetail/{roomId}")
-    public EachRoomResponseDto getRoomPage(@PathVariable Long roomId) {
+    public ResponseEntity<EachRoomResponseDto> getRoomPage(@PathVariable Long roomId) {
 
-        return roomDetailService.getRoomId(roomId);
+        return ResponseEntity.ok(roomDetailService.getRoomId(roomId));
     }
 
     @GetMapping("/roomComfort/{roomId}")
