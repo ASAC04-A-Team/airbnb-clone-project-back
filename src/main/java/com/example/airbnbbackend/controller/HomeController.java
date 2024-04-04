@@ -1,13 +1,14 @@
 package com.example.airbnbbackend.controller;
 
+import com.example.airbnbbackend.common.Constants;
 import com.example.airbnbbackend.dto.responseDto.EachHomePageRoomItemsResponseDto;
+import com.example.airbnbbackend.common.exception.customException.NotFoundException;
 import com.example.airbnbbackend.service.RoomCategoryService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.server.ResponseStatusException;
 
 import java.util.HashMap;
 import java.util.List;
@@ -29,12 +30,9 @@ public class HomeController {
             List<EachHomePageRoomItemsResponseDto> roomItems = roomCategoryService.findAllRoomForHomePage(categoryId);
             roomItem.put("roomItem", roomItems);
             return ResponseEntity.ok(roomItem);
-        } catch (ResponseStatusException e) {
-            log.info(e.getMessage());
-            return ResponseEntity.notFound().build(); //아무것도 반환하지 않는다.
-        } catch (Exception e) {
-            log.info("카테고리 ID에 맞는 Room 리스트를 가져오던 중 에러 발생: {}", categoryId, e);
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build(); // 500 Internal Server Error
+        } catch (RuntimeException e) {
+            log.error(e.getMessage());
+            throw new NotFoundException(Constants.ExceptionClass.ROOM_CATEGORY, e.getMessage());
         }
     }
 }
