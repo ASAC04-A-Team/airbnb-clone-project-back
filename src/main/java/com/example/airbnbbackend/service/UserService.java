@@ -46,6 +46,7 @@ public class UserService {
 
         return userHostReviews.stream().map(
                 (eachUserHostReview) -> UserHostReviewResponseDto.of(eachUserHostReview)).toList();
+
     }
 
     public UserInformationResponseDto findAllUserInformation(Long userId) {

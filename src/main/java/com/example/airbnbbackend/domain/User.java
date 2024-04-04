@@ -51,6 +51,7 @@ public class User {
     @Column(nullable = false)
     @Getter
     private Boolean isAuth;
+    private String userToken;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Likes> likesList = new ArrayList<>();
