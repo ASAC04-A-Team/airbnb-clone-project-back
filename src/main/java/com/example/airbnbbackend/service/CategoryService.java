@@ -23,8 +23,7 @@ public class CategoryService {
      */
     public List<EachCategoryResponseDto> findAllCategories() {
         List<Category> categories = categoryRepository.findAll();
-        return categories.stream().map((eachCategory) ->
-                        EachCategoryResponseDto.of(eachCategory))
+        return categories.stream().map(EachCategoryResponseDto::of)
                 .toList();
     }
 }

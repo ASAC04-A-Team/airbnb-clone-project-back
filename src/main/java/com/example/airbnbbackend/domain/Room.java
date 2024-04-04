@@ -60,7 +60,6 @@ public class Room {
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
     private List<Review> reviews = new ArrayList<>();
 
-    @Getter
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
     private List<RoomImage> roomImages = new ArrayList<>();
 
@@ -82,10 +81,8 @@ public class Room {
 
     /* 연관관계 메서드 */
     public List<String> getRoomImages() {
-        List<String> roomImages = new ArrayList<>();
-        for(RoomImage roomImage : this.roomImages) {
-            roomImages.add(roomImage.getImageUrl());
-        }
-        return roomImages;
+        return roomImages.stream()
+                .map(RoomImage::getImageUrl)
+                .toList();
     }
 }

@@ -23,8 +23,8 @@ public class HomeController {
     private final RoomCategoryService roomCategoryService;
 
     @GetMapping("/{categoryId}")
-    public ResponseEntity<Map<String, Object>> getEachRoomItems(@PathVariable("categoryId") Long categoryId ){
-        Map<String, Object> roomItem = new HashMap<>();
+    public ResponseEntity<Map<String, List<EachHomePageRoomItemsResponseDto>>> getEachRoomItems(@PathVariable Long categoryId){
+        Map<String, List<EachHomePageRoomItemsResponseDto>> roomItem = new HashMap<>();
 
         try {
             List<EachHomePageRoomItemsResponseDto> roomItems = roomCategoryService.findAllRoomForHomePage(categoryId);

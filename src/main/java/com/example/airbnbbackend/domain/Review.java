@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 import java.time.LocalDateTime;
 
 @Entity
-@NoArgsConstructor
 @Getter
 public class Review {
 
@@ -21,7 +20,6 @@ public class Review {
 
     @Column(nullable = false)
     private LocalDateTime writeAt;
-
 
     @Column(nullable = false)
     private Integer score;

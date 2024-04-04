@@ -7,6 +7,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import java.util.HashMap;
@@ -25,7 +26,7 @@ public class CustomExceptionHandler {
      * @param request
      * @return 예외정보 ResponseEntity
      */
-    @ExceptionHandler(value = NotFoundException.class)
+    @ExceptionHandler
     public ResponseEntity<Map<String, String>> handleNotFoundException(NotFoundException e, HttpServletRequest request) {
         HttpHeaders responseHeaders = new HttpHeaders();
 

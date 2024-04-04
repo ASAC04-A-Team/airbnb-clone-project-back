@@ -6,6 +6,7 @@ import com.example.airbnbbackend.repository.ReviewRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.CollectionUtils;
 
 import java.util.List;
 
@@ -23,8 +24,10 @@ public class ReviewService {
      */
     public List<EachRoomReviewResponseDto> findAllRoomReviews(Long roomId) {
         List<Review> reviews = reviewRepository.findReviewByRoomId(roomId);
-        return reviews.stream().map((eachReview) ->
-                EachRoomReviewResponseDto.of(eachReview))
+        if (CollectionUtils.isEmpty(reviews)) {
+            throw new DbNotFoundException(Stacktrace, Message, );
+        }
+        return reviews.stream().map(EachRoomReviewResponseDto::of)
                 .toList();
     }
 }

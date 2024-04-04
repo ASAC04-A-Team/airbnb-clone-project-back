@@ -25,7 +25,7 @@ public class ReviewController {
      * @return 리뷰 리스트
      */
     @GetMapping("/{roomId}")
-    public List<EachRoomReviewResponseDto> getRoomReviews(@PathVariable("roomId") Long roomId) {
+    public List<EachRoomReviewResponseDto> getRoomReviews(@PathVariable Long roomId) {
         return reviewService.findAllRoomReviews(roomId);
     }
 }

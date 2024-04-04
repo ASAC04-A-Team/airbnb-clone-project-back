@@ -6,7 +6,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
-@NoArgsConstructor
 @Table(name = "room_category")
 public class RoomCategory {
 
@@ -21,7 +20,7 @@ public class RoomCategory {
     @JoinColumn(name = "category_id")
     private Category category;
 
-@Getter
+    @Getter
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "room_id")
     private Room room;
