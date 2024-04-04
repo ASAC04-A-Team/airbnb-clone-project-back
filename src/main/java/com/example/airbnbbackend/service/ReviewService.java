@@ -23,8 +23,8 @@ public class ReviewService {
      */
     public List<EachRoomReviewResponseDto> findAllRoomReviews(Long roomId) {
         List<Review> reviews = reviewRepository.findReviewByRoomId(roomId);
-        return reviews.stream().map((eachReview) ->
-                EachRoomReviewResponseDto.of(eachReview))
+        return reviews.stream()
+                .map(EachRoomReviewResponseDto::of)
                 .toList();
     }
 }

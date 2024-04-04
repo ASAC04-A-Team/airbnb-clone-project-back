@@ -42,7 +42,7 @@ public class RoomCategoryService {
         return rooms.stream()
                 .filter(Optional::isPresent) // 값이 존재하는 Optional만 필터링
                 .map(Optional::get) // Optional에서 값(room) 추출
-                .map(eachRoom -> EachHomePageRoomItemsResponseDto.of(eachRoom))
+                .map(EachHomePageRoomItemsResponseDto::of)
                 .collect(Collectors.toList());
     }
 
