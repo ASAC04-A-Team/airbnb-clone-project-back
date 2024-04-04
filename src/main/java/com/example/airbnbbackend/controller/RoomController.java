@@ -7,10 +7,7 @@ import com.example.airbnbbackend.dto.responseDto.EachRoomResponseDto;
 import com.example.airbnbbackend.service.RoomDetailService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-<<<<<<< HEAD
-=======
 import org.springframework.http.HttpStatus;
->>>>>>> refs/remotes/origin/feat/roomDetailAPI
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
