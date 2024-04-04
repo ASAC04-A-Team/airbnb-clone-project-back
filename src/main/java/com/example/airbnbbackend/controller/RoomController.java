@@ -7,6 +7,8 @@ import com.example.airbnbbackend.dto.responseDto.EachRoomResponseDto;
 import com.example.airbnbbackend.service.RoomDetailService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,27 +30,27 @@ public class RoomController {
      * @return
      */
     @GetMapping("/roomDetail/{roomId}")
-    public EachRoomResponseDto getRoomPage(@PathVariable Long roomId) {
+    public ResponseEntity<EachRoomResponseDto> getRoomPage(@PathVariable Long roomId) {
 
-        return roomDetailService.getRoomId(roomId);
+        return ResponseEntity.status(HttpStatus.OK).body(roomDetailService.getRoomId(roomId));
     }
 
     @GetMapping("/roomComfort/{roomId}")
-    public List<EachRoomComfortResponseDto> getRoomComfort(@PathVariable Long roomId){
+    public ResponseEntity<List<EachRoomComfortResponseDto>> getRoomComfort(@PathVariable Long roomId){
 
-        return roomDetailService.getRoomComfort(roomId);
+        return ResponseEntity.status(HttpStatus.OK).body(roomDetailService.getRoomComfort(roomId));
     }
 
 
     @GetMapping("/roomAdvantage/{roomId}")
-    public List<EachRoomAdvantageResponseDto> getRoomAdvantage(@PathVariable Long roomId){
+    public ResponseEntity<List<EachRoomAdvantageResponseDto>> getRoomAdvantage(@PathVariable Long roomId){
 
-        return roomDetailService.getRoomAdvantage(roomId);
+        return ResponseEntity.status(HttpStatus.OK).body(roomDetailService.getRoomAdvantage(roomId));
     }
 
     @GetMapping("/roomHost/{roomId}")
-    public EachHostResponseDto getRoomHost(@PathVariable Long roomId){
-        return roomDetailService.getRoomHost(roomId);
+    public ResponseEntity<EachHostResponseDto> getRoomHost(@PathVariable Long roomId){
+        return ResponseEntity.status(HttpStatus.OK).body(roomDetailService.getRoomHost(roomId));
     }
 
     /**
