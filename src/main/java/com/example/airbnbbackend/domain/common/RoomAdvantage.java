@@ -15,7 +15,6 @@ public class RoomAdvantage {
     @Column(name = "room_advantage_id")
     private Long id;
 
-
     @Getter
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "advantage_id")

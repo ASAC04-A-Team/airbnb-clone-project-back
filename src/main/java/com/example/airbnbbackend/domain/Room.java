@@ -74,11 +74,11 @@ public class Room {
     private RoomDetail roomDetail;
 
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
-    private List<RoomCategory> roomCategory= new ArrayList<>();
+    private List<RoomCategory> roomCategory;
 
     @Getter
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
-    private List<RoomComfort> roomComforts= new ArrayList<>();
+    private List<RoomComfort> roomComforts;
 
 
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
@@ -86,11 +86,9 @@ public class Room {
 
     /* 연관관계 메서드 */
     public List<String> getRoomImages() {
-        List<String> roomImages = new ArrayList<>();
-        for(RoomImage roomImage : this.roomImages) {
-            roomImages.add(roomImage.getImageUrl());
-        }
-        return roomImages;
+        return roomImages.stream()
+                .map(RoomImage::getImageUrl)
+                .toList();
     }
 
     public List<Comfort> getRoomComforts() {
@@ -111,5 +109,8 @@ public class Room {
 
         return roomAdvantages;
     }
+
+
+
 
 }
