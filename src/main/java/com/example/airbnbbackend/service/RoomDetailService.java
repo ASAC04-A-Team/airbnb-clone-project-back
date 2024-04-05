@@ -32,7 +32,7 @@ public class RoomDetailService {
 
     public EachRoomResponseDto getRoomId(Long roomId) {
         Optional<Room> roomDetail = roomRepository.findById(roomId);
-        if(roomDetail.isPresent()){
+        if(roomDetail.isEmpty()){
             throw new RuntimeException("해당 방을 찾을 수 없습니다.");
         }
         return EachRoomResponseDto.of(roomDetail.get());
@@ -66,7 +66,7 @@ public class RoomDetailService {
 
     public EachHostResponseDto getRoomHost(Long roomId){
         Optional<Host> host = hostRepository.findHostByRoomId(roomId);
-        if(!host.isPresent()){
+        if(host.isEmpty()){
             throw new RuntimeException("해당 Room : " + roomId + "은 호스트가 존재하지 않습니다");
         }
         return EachHostResponseDto.of(host.get());
