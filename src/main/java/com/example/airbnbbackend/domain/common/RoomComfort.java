@@ -2,6 +2,7 @@ package com.example.airbnbbackend.domain.common;
 
 import com.example.airbnbbackend.domain.Room;
 import jakarta.persistence.*;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
@@ -14,11 +15,16 @@ public class RoomComfort {
     @Column(name = "room_comfort_id")
     private Long id;
 
+    @Getter
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "comfort_id")
     private Comfort comfort;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @Getter
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "room_id")
     private Room room;
+
+
+
 }
