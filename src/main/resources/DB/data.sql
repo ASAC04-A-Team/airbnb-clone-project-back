@@ -1,10 +1,11 @@
-INSERT INTO User (user_id, email, pw, profile_image_url, nickname, nation, address, register_At, is_Host) VALUES (1, 'aaron@naver.com', '1111', 'https://www.ghibli.jp/gallery/totoro030.jpg', 'aaron', 'South Korea', 'Seoul', '2023-04-01 12:00:00', false),
-(2, 'baron@naver.com', '2222', 'https://www.ghibli.jp/gallery/totoro031.jpg', 'baron', 'South Korea', 'Seoul', '2023-04-02 12:00:00', true),
-(3, 'caron@naver.com', '333', 'https://www.ghibli.jp/gallery/totoro032.jpg', 'caron', 'South Korea', 'Seoul', '2023-04-03 12:00:00', true),
-(4, 'daron@naver.com', '4444', 'https://www.ghibli.jp/gallery/totoro033.jpg', 'daron', 'South Korea', 'Seoul', '2023-04-04 12:00:00', true),
-(5, 'earon@naver.com', '5555', 'https://www.ghibli.jp/gallery/totoro034.jpg', 'earon', 'South Korea', 'Seoul', '2023-04-05 12:00:00', true);
+INSERT INTO user (user_id, email, pw, profile_image_url, nickname, nation, address, register_at, is_host, email_auth_code)
+VALUES (1, 'aaron@naver.com', '1111', 'https://www.ghibli.jp/gallery/totoro030.jpg', 'aaron', 'South Korea', 'Seoul', '2023-04-01 12:00:00', false, '734701'),
+(2, 'baron@naver.com', '2222', 'https://www.ghibli.jp/gallery/totoro031.jpg', 'baron', 'South Korea', 'Seoul', '2023-04-02 12:00:00', true, '123456'),
+(3, 'caron@naver.com', '333', 'https://www.ghibli.jp/gallery/totoro032.jpg', 'caron', 'South Korea', 'Seoul', '2023-04-03 12:00:00', true, '438237'),
+(4, 'daron@naver.com', '4444', 'https://www.ghibli.jp/gallery/totoro033.jpg', 'daron', 'South Korea', 'Seoul', '2023-04-04 12:00:00', true, '549843'),
+(5, 'earon@naver.com', '5555', 'https://www.ghibli.jp/gallery/totoro034.jpg', 'earon', 'South Korea', 'Seoul', '2023-04-05 12:00:00', true, '867453');
 
-INSERT INTO host (host_id, register_at, user_id, grade) VALUES (1, '2023-04-02 12:00:00', 2, '슈퍼호스트'),(2, '2023-04-02 12:00:00', 3, '호스트'),(3, '2023-04-02 12:00:00', 4, '호스트'),(4, '2023-04-02 12:00:00', 5, '슈퍼호스트');
+INSERT INTO host (host_id, register_at, user_id, grade) VALUES (1, '2023-04-02 12:00:00', 2, true),(2, '2023-04-02 12:00:00', 3, false),(3, '2023-04-02 12:00:00', 4, false),(4, '2023-04-02 12:00:00', 5, true);
 
 INSERT INTO user_interest (user_interest_id , user_id, hobby, residence) VALUES (1, 1, '넷플리스 보기', 'Seoul' ),  (2, 2, '영화 보기', 'Seoul' ),  (3, 3, '드라마 보기', 'Seoul' ), (4, 4, '독서', 'Seoul' ), (5, 5, '축구 보기', 'Seoul' );
 
@@ -443,8 +444,8 @@ VALUES (1, '물놀이가 가능한 풀장', '/svgIcons/roomAdvantageSvgs/water.s
 (2, '호스트의 편안함', '/svgIcons/roomAdvantageSvgs/expertHost.svg', '경험이 풍부한 호스트' ),
 (3, '조용한 사무공간',  '/svgIcons/roomAdvantageSvgs/workingSpace.svg', '업무 전용 공간'),
  (4, '셀프 체크인','/svgIcons/roomAdvantageSvgs/selfCheckIn.svg', '셀프 체크인'),
- (5, '슈퍼 호스트', '/svgIcons/roomAdvantageSvgs/superHost.sv', '슈퍼 호스트'),
-(6,  '무료 주차 혜택을 누리세요.', 'image": "/svgIcons/roomAdvantageSvgs/freeParking.svg','무료 주차 혜택을 누리세요.');
+ (5, '슈퍼 호스트', '/svgIcons/roomAdvantageSvgs/superHost.svg', '슈퍼 호스트'),
+(6,  '무료 주차 혜택을 누리세요.', '/svgIcons/roomAdvantageSvgs/freeParking.svg','무료 주차 혜택을 누리세요.');
 
 INSERT INTO room_advantage (room_advantage_id, room_id, advantage_id)
 values (1, 1, 1),
