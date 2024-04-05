@@ -36,7 +36,10 @@ out/
 ### VS Code ###
 .vscode/
 
+*.log
+
 *.yml
 
 logs/
 *.log
+
