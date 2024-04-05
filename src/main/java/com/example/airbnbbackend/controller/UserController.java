@@ -28,11 +28,11 @@ public class UserController {
     /* Todo User 사용자 소개 조회 API -userId를 받으면 user_interest Table을 가져오는 API*/
     // nickname,residence,hobby
     @GetMapping("/introduction/{userId}")
-    public BaseResponse<UserIntroductionResponseDto> getUserIntroduction(@PathVariable("userId") Long userId ){
+    public ResponseEntity<UserIntroductionResponseDto> getUserIntroduction(@PathVariable("userId") Long userId ){
         UserIntroductionResponseDto userIntroduction = userService.findAllUserIntroduction(userId);
 
-        //return ResponseEntity.status(HttpStatus.OK).body(UserIntroduction);
-        return BaseResponse.success(userIntroduction);
+        return ResponseEntity.status(HttpStatus.OK).body(userIntroduction);
+        //return BaseResponse.success(userIntroduction);
     }
 
     /* Todo User 사용자 후기 조회 API -userId를 받으면 해당 User의 host_review Table을 List형식으로 가져오는 API */

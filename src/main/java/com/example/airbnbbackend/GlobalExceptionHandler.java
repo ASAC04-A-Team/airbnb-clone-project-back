@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import static com.example.airbnbbackend.config.BaseResponseStatus.GlOBAL_EXCEPTION;
 
 
-@RestControllerAdvice
+
 @Slf4j
 public class GlobalExceptionHandler {
 
