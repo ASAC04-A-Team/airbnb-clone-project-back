@@ -66,8 +66,6 @@ public class RoomDetailService {
 
     public EachHostResponseDto getRoomHost(Long roomId){
         Optional<Host> host = hostRepository.findHostByRoomId(roomId);
-        if(host.isPresent()){
-        Optional<Host> host = hostRepository.findByRoomId(roomId);
         if(!host.isPresent()){
             throw new RuntimeException("해당 Room : " + roomId + "은 호스트가 존재하지 않습니다");
         }
