@@ -27,6 +27,10 @@ public class RoomCategoryService {
      * @return 리뷰 리스트
      */
     public List<EachHomePageRoomItemsResponseDto> findAllRoomForHomePage(Long categoryId){
+        /*
+        앞에 id가 유효한 값인지 확인하는 검증이 있으면 좋지 않을까?
+         */
+
         List<RoomCategory> roomCategories = roomCategoryRepository.findAllByCategoryId(categoryId)
                 .orElse(Collections.emptyList());
 
