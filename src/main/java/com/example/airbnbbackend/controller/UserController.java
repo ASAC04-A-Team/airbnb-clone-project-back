@@ -51,7 +51,7 @@ public class UserController {
         return userInformation;
     }
 
-    /* Todo User 사용자 인증 정보 조회 API */
+//    /* Todo User 사용자 인증 정보 조회 API */
     @GetMapping("/authInformation/{userId}")
     public Boolean getUserAuthInformation(@PathVariable("userId") Long userId){
         Boolean userAuthInformation = userService.findUserAuthInformation(userId);

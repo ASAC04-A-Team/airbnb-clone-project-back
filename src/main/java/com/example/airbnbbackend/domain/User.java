@@ -10,6 +10,7 @@ import java.util.List;
 
 @Entity
 @NoArgsConstructor
+@Getter
 public class User {
 
     @Id
@@ -41,17 +42,17 @@ public class User {
     private String emailAuthCode;
 
     @Column(nullable = false)
-    @Getter
     private LocalDateTime registerAt;
 
     @Column(nullable = false)
-    @Getter
     private Boolean isHost;
 
     @Column(nullable = false)
-    @Getter
     private Boolean isAuth;
+
+    @Column(nullable = false)
     private String userToken;
+
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Likes> likesList = new ArrayList<>();
