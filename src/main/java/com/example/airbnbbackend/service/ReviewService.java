@@ -13,7 +13,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @Transactional(readOnly = true)
 public class ReviewService {
-    private final ReviewReposirotyService reviewReposirotyService;
+    private final ReviewRepositoryService reviewRepositoryService;
 
     /**
      * 방 번호에 따른 리뷰리스트 반환
@@ -21,7 +21,7 @@ public class ReviewService {
      * @return 리뷰 리스트
      */
     public List<EachRoomReviewResponseDto> findAllRoomReviews(Long roomId) {
-        List<Review> reviews = reviewReposirotyService.findAllRoomReviews(roomId);
+        List<Review> reviews = reviewRepositoryService.findAllRoomReviews(roomId);
         return reviews.stream()
                 .map(EachRoomReviewResponseDto::of)
                 .toList();
@@ -33,7 +33,7 @@ public class ReviewService {
      * @return 리뷰 개수 및 평균 점수 반환
      */
     public EachRoomReiviewSummaryResponseDto findAllRoomReviewsStatistics(Long roomId) {
-        List<Review> reviews = reviewReposirotyService.findAllRoomReviews(roomId);
+        List<Review> reviews = reviewRepositoryService.findAllRoomReviews(roomId);
         return EachRoomReiviewSummaryResponseDto.of(reviews);
     }
 }
