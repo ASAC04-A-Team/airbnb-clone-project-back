@@ -28,6 +28,7 @@ public class Advantage {
     @Column(nullable = false)
     private String description;
 
+    @Getter
     @OneToMany(mappedBy = "advantage", cascade = CascadeType.ALL)
     private List<RoomAdvantage> roomAdvantages = new ArrayList<>();
 }

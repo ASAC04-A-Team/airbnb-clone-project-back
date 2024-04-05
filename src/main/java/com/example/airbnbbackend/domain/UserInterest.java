@@ -1,11 +1,13 @@
 package com.example.airbnbbackend.domain;
 
 import jakarta.persistence.*;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
 @NoArgsConstructor
 @Table(name = "user_interest")
+@Getter
 public class UserInterest {
 
     @Id
@@ -17,7 +19,7 @@ public class UserInterest {
 
     private String residence;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private User user;
 }
