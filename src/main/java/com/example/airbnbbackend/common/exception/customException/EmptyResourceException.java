@@ -3,14 +3,15 @@ package com.example.airbnbbackend.common.exception.customException;
 import com.example.airbnbbackend.common.Constants;
 import lombok.Getter;
 import org.springframework.http.HttpStatus;
-public class NotFoundException extends RuntimeException {
+
+public class EmptyResourceException extends RuntimeException {
 
     private Constants.ExceptionClass exceptionClass;
 
     @Getter
-    private final HttpStatus httpStatus = HttpStatus.NOT_FOUND;
+    private final HttpStatus httpStatus = HttpStatus.NOT_IMPLEMENTED;
 
-    public NotFoundException(Constants.ExceptionClass exceptionClass, String message) {
+    public EmptyResourceException(Constants.ExceptionClass exceptionClass, String message) {
         super(exceptionClass.toString() + message);
         this.exceptionClass = exceptionClass;
     }

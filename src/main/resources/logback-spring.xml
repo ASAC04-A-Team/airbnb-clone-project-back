@@ -34,9 +34,6 @@
     <logger name="com.example.airbnbbackend.service" level="INFO" />
     <logger name="com.example.airbnbbackend.repository" level="INFO" />
 
-    <!-- Hibernate SQL Logging -->
-    <logger name="org.hibernate.SQL" level="DEBUG" />
-
     <root level="INFO">
         <appender-ref ref="console" />
         <appender-ref ref="INFO_LOG" />
