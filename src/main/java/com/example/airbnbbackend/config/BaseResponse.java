@@ -21,7 +21,6 @@ public class BaseResponse<T> {//BaseResponse 객체를 사용할때 성공, 실�
     private T result;
 
 
-
     // 요청에 성공한 경우
     public BaseResponse(T result) {
         this.isSuccess = SUCCESS.isSuccess();
