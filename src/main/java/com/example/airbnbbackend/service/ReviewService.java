@@ -1,7 +1,7 @@
 package com.example.airbnbbackend.service;
 
 import com.example.airbnbbackend.domain.Review;
-import com.example.airbnbbackend.dto.responseDto.EachRoomReiviewSummaryResponseDto;
+import com.example.airbnbbackend.dto.responseDto.EachRoomReviewSummaryResponseDto;
 import com.example.airbnbbackend.dto.responseDto.EachRoomReviewResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -32,8 +32,8 @@ public class ReviewService {
      * @param roomId
      * @return 리뷰 개수 및 평균 점수 반환
      */
-    public EachRoomReiviewSummaryResponseDto findAllRoomReviewsStatistics(Long roomId) {
+    public EachRoomReviewSummaryResponseDto findAllRoomReviewsStatistics(Long roomId) {
         List<Review> reviews = reviewRepositoryService.findAllRoomReviews(roomId);
-        return EachRoomReiviewSummaryResponseDto.of(reviews);
+        return EachRoomReviewSummaryResponseDto.of(reviews);
     }
 }
