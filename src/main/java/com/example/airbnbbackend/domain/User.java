@@ -47,6 +47,7 @@ public class User {
     @Column(nullable = false)
     private Boolean isHost;
 
+
     @Column(nullable = false)
     private Boolean isAuth;
 

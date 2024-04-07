@@ -1,7 +1,7 @@
 INSERT INTO user (user_id, email, pw, profile_image_url, nickname, nation, address,email_auth_code, register_at, is_host ,is_auth,user_token)
-VALUES (1, 'aaron@naver.com', '1111', 'https://www.ghibli.jp/gallery/totoro030.jpg', 'aaron', 'South Korea', 'Seoul','734701','2023-04-01 12:00:00', false,false,'12dsad34567'),
-       (2, 'baron@naver.com', '2222', 'https://www.ghibli.jp/gallery/totoro031.jpg', 'baron', 'South Korea', 'Seoul','734701','2023-04-02 12:00:00', true,false,'454515dsada15'),
-       (3, 'caron@naver.com', '333', 'https://www.ghibli.jp/gallery/totoro032.jpg', 'caron', 'South Korea', 'Seoul', '734701','2023-04-03 12:00:00', true,false,'fsgdgdfgd'),
+VALUES (1, 'aaron@naver.com', '1111', 'https://www.ghibli.jp/gallery/totoro030.jpg', 'aaron', 'South Korea', 'Seoul','734701','2015-04-01 12:00:00', false,false,'12dsad34567'),
+       (2, 'baron@naver.com', '2222', 'https://www.ghibli.jp/gallery/totoro031.jpg', 'baron', 'South Korea', '김해','734701','2016-04-02 12:00:00', true,false,'454515dsada15'),
+       (3, 'caron@naver.com', '333', 'https://www.ghibli.jp/gallery/totoro032.jpg', 'caron', 'South Korea', '제주', '734701','2018-04-03 12:00:00', true,false,'fsgdgdfgd'),
        (4, 'daron@naver.com', '4444', 'https://www.ghibli.jp/gallery/totoro033.jpg', 'daron', 'South Korea', 'Seoul', '734701','2023-04-04 12:00:00', true,false,'dsa5d1ASdSA'),
        (5, 'earon@naver.com', '5555', 'https://www.ghibli.jp/gallery/totoro034.jpg', 'earon', 'South Korea', 'Seoul', '734701','2023-04-05 12:00:00', true,false,'dsadSd2SdAA');
 
@@ -23,7 +23,9 @@ VALUES (1, 1, 1, '2023-04-02 12:00:00', '아주 깨끗하게 놀고가셨어요 
        (2, 1, 2, '2023-04-02 12:00:00', '매번 찾아와주셔서 감사해요 또 놀러와요'),
        (3, 2, 3, '2023-04-02 12:00:00', '아주 깨끗하게 놀고가셨어요 다음에도 놀러오세요.'),
        (4, 3, 4, '2023-04-02 12:00:00', '아주 깨끗하게 놀고가셨어요 다음에도 놀러오세요'),
-       (5, 4, 5, '2023-04-02 12:00:00', '아주 깨끗하게 놀고가셨어요 다음에도 놀러오세요');
+       (5, 3, 1, '2023-04-02 12:00:00', '아주 깨끗하게 놀고가셨어요 다음에도 놀러오세요'),
+       (6, 3, 1, '2023-04-02 12:00:00', '아주 깨끗하게 놀고가셨어요 다음에도 놀러오세요'),
+       (7, 4, 1, '2023-04-02 12:00:00', '아주 깨끗하게 놀고가셨어요 다음에도 놀러오세요');
 
 INSERT INTO room (room_id, host_id, each_guest_price, extra_pet_price, address, introduction, description, name, nation,
                   guest_preference)

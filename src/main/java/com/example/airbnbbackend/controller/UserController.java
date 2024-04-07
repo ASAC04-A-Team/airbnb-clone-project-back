@@ -1,11 +1,11 @@
 package com.example.airbnbbackend.controller;
 
-import com.example.airbnbbackend.config.BaseResponse;
+
+import com.example.airbnbbackend.dto.responseDto.UserAuthInformationDto;
 import com.example.airbnbbackend.dto.responseDto.UserHostReviewResponseDto;
 import com.example.airbnbbackend.dto.responseDto.UserInformationResponseDto;
 import com.example.airbnbbackend.dto.responseDto.UserIntroductionResponseDto;
 import com.example.airbnbbackend.service.UserService;
-import jakarta.persistence.Persistence;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -53,8 +53,8 @@ public class UserController {
 
 //    /* Todo User 사용자 인증 정보 조회 API */
     @GetMapping("/authInformation/{userId}")
-    public Boolean getUserAuthInformation(@PathVariable("userId") Long userId){
-        Boolean userAuthInformation = userService.findUserAuthInformation(userId);
+    public UserAuthInformationDto getUserAuthInformation(@PathVariable("userId") Long userId){
+        UserAuthInformationDto userAuthInformation = userService.findUserAuthInformation(userId);
         return userAuthInformation;
     }
 
