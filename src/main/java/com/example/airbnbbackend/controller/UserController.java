@@ -40,6 +40,12 @@ public class UserController {
     @GetMapping("/hostReview/{userId}")
     public List<UserHostReviewResponseDto> getUserHostReviews(@PathVariable("userId") Long userId){
         List<UserHostReviewResponseDto> userHostReviews = userService.findUserHostReviews(userId);
+
+        for (UserHostReviewResponseDto review : userHostReviews) {
+            log.info("리뷰 내용: " + review.getContent());
+            log.info("--------------------------------------");
+        }
+
         return userHostReviews;
     }
 

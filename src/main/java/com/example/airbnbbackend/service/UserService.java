@@ -45,9 +45,9 @@ public class UserService {
                 .map(eachUserHostReview -> {
                     int year = eachUserHostReview.getWriteAt().getYear();
                     int month = eachUserHostReview.getWriteAt().getMonthValue();
-                    String yearAsString = String.valueOf(year);
-                    String monthAsString = String.valueOf(month);
-                    return UserHostReviewResponseDto.of(eachUserHostReview, yearAsString, monthAsString);
+                    String stringYear = String.valueOf(year);
+                    String stringMonth = String.valueOf(month);
+                    return UserHostReviewResponseDto.of(eachUserHostReview,  stringYear, stringMonth);
                 })
                 .toList();}
 
