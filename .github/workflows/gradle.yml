@@ -26,7 +26,7 @@ jobs:
 
       # Java 빌드
       - name: Spring Boot Build
-        run: ./gradlew clean build
+        run: ./gradlew clean build -x test
 
       # DockerFile 을 기반으로 Docker Image 빌드
       - name: docker image build

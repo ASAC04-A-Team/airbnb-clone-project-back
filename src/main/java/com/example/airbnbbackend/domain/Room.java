@@ -62,7 +62,6 @@ public class Room {
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
     private List<Review> reviews = new ArrayList<>();
 
-    @Getter
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
     private List<RoomImage> roomImages = new ArrayList<>();
 
@@ -76,7 +75,6 @@ public class Room {
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
     private List<RoomCategory> roomCategory;
 
-    @Getter
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
     private List<RoomComfort> roomComforts;
 
