@@ -10,19 +10,19 @@ import java.util.List;
 
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Getter
-public class EachRoomReiviewSummaryResponseDto {
+public class EachRoomReviewSummaryResponseDto {
 
     private Integer reviewsCount;
 
     private Double reviewsAvg;
 
-    public static EachRoomReiviewSummaryResponseDto of(List<Review> reviews){
+    public static EachRoomReviewSummaryResponseDto of(List<Review> reviews){
         IntSummaryStatistics statistics = reviews
                 .stream()
                 .mapToInt(Review::getScore)
                 .summaryStatistics();
 
-        return new EachRoomReiviewSummaryResponseDto(
+        return new EachRoomReviewSummaryResponseDto(
                 reviews.size(),
                 statistics.getAverage()
         );

@@ -10,6 +10,7 @@ import java.util.List;
 
 @Entity
 @NoArgsConstructor
+@Getter
 public class Host {
 
     @Id

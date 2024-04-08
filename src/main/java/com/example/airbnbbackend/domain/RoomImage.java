@@ -18,6 +18,7 @@ public class RoomImage {
     @Column(nullable = false)
     private String imageUrl;
 
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "room_id")
     private Room room;
