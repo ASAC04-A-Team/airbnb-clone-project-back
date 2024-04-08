@@ -1,0 +1,21 @@
+version: "3"
+services:
+  mysql:
+    container_name: mysql_host
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: aaron
+      MYSQL_PASSWORD: 1234
+      MYSQL_DATABASE: example
+    ports:
+      - 3307:3306
+  spring_app:
+    build:
+      context: .
+      args:
+        JAR_FILE: MOVED.jar
+    ports:
+      - 1000:8080
+    depends_on:
+      - mysql

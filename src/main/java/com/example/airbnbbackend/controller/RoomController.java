@@ -1,10 +1,16 @@
 package com.example.airbnbbackend.controller;
 
-import com.example.airbnbbackend.dto.responseDto.EachHostResponseDto;
-import com.example.airbnbbackend.dto.responseDto.EachRoomAdvantageResponseDto;
-import com.example.airbnbbackend.dto.responseDto.EachRoomComfortResponseDto;
-import com.example.airbnbbackend.dto.responseDto.EachRoomResponseDto;
+import com.example.airbnbbackend.common.dto.BaseResponse;
+import com.example.airbnbbackend.dto.responseDto.*;
 import com.example.airbnbbackend.service.RoomDetailService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.ArraySchema;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.ExampleObject;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -20,6 +26,7 @@ import java.util.List;
 @RequestMapping("/api/room")
 @Slf4j
 @RequiredArgsConstructor
+@Tag(name = "Room", description = "Room API")
 public class RoomController {
 
     private final RoomDetailService roomDetailService;
@@ -29,36 +36,89 @@ public class RoomController {
      * @param roomId
      * @return
      */
+    @Operation(summary = "Get Room Detail data")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "00", description = "성공",
+                    content = {@Content(mediaType = "application/json",
+                            schema = @Schema(implementation = EachRoomResponseDto.class))}),
+            @ApiResponse(responseCode = "404", description = "실패",
+                    content = @Content(mediaType = "application/json",
+                            examples = {
+                                    @ExampleObject(name = "Room Detail 정보가 없는 경우",
+                                            value = "{\"isSuccess\": false, \"code\": \"404\", \"message\": \"요청하신 정보를 찾을 수 없습니다.\"}")
+                            }))
+    })
     @GetMapping("/roomDetail/{roomId}")
-    public ResponseEntity<EachRoomResponseDto> getRoomPage(@PathVariable Long roomId) {
+    public BaseResponse<EachRoomResponseDto> getRoomPage(@PathVariable Long roomId) {
 
-        return ResponseEntity.status(HttpStatus.OK).body(roomDetailService.getRoomId(roomId));
-    }
-
-    @GetMapping("/roomComfort/{roomId}")
-    public ResponseEntity<List<EachRoomComfortResponseDto>> getRoomComfort(@PathVariable Long roomId){
-
-        return ResponseEntity.status(HttpStatus.OK).body(roomDetailService.getRoomComfort(roomId));
-    }
-
-
-    @GetMapping("/roomAdvantage/{roomId}")
-    public ResponseEntity<List<EachRoomAdvantageResponseDto>> getRoomAdvantage(@PathVariable Long roomId){
-
-        return ResponseEntity.status(HttpStatus.OK).body(roomDetailService.getRoomAdvantage(roomId));
-    }
-
-    @GetMapping("/roomHost/{roomId}")
-    public ResponseEntity<EachHostResponseDto> getRoomHost(@PathVariable Long roomId){
-        return ResponseEntity.status(HttpStatus.OK).body(roomDetailService.getRoomHost(roomId));
+        return BaseResponse.success(roomDetailService.getRoomId(roomId));
     }
 
     /**
-     * 홈 페이지 : 숙소 정보 리스트 반환 API
+     * 숙소 편의시설 정보 반환 API
+     * @param roomId
+     * @return 숙소 편의시설 정보 리스트
      */
-//    @GetMapping("/")
-//    public List<HomepageRoomResponseDto> getRoomPage() {
-//    }
+    @Operation(summary = "Get Room comfort data")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "00", description = "성공",
+                    content = {@Content(mediaType = "application/json",
+                            array = @ArraySchema(schema = @Schema(implementation = EachRoomComfortResponseDto.class)))}),
+            @ApiResponse(responseCode = "404", description = "실패",
+                    content = @Content(mediaType = "application/json",
+                            examples = {
+                                    @ExampleObject(name = "Room Comfort 정보가 없는 경우",
+                                            value = "{\"isSuccess\": false, \"code\": \"404\", \"message\": \"요청하신 정보를 찾을 수 없습니다.\"}")
+                            }))
+    })
+    @GetMapping("/roomComfort/{roomId}")
+    public BaseResponse<List<EachRoomComfortResponseDto>> getRoomComfort(@PathVariable Long roomId){
 
+        return BaseResponse.success(roomDetailService.getRoomComfort(roomId));
+    }
 
+    /**
+     * 숙소 장점 정보 반환 API
+     * @param roomId
+     * @return 숙소 장점 리스트
+     */
+    @Operation(summary = "Get Room advantage data")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "00", description = "성공",
+                    content = {@Content(mediaType = "application/json",
+                            array = @ArraySchema(schema = @Schema(implementation = EachRoomAdvantageResponseDto.class)))}),
+            @ApiResponse(responseCode = "404", description = "실패",
+                    content = @Content(mediaType = "application/json",
+                            examples = {
+                                    @ExampleObject(name = "Room advantage 정보가 없는 경우",
+                                            value = "{\"isSuccess\": false, \"code\": \"404\", \"message\": \"요청하신 정보를 찾을 수 없습니다.\"}")
+                            }))
+    })
+    @GetMapping("/roomAdvantage/{roomId}")
+    public BaseResponse<List<EachRoomAdvantageResponseDto>> getRoomAdvantage(@PathVariable Long roomId){
+
+        return BaseResponse.success(roomDetailService.getRoomAdvantage(roomId));
+    }
+
+    /**
+     * 숙소 호스트 정보 반환 API
+     * @param roomId
+     * @return 숙소 호스트
+     */
+    @Operation(summary = "Get Host of the room")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "00", description = "성공",
+                    content = {@Content(mediaType = "application/json",
+                            schema = @Schema(implementation = EachHostResponseDto.class))}),
+            @ApiResponse(responseCode = "404", description = "실패",
+                    content = @Content(mediaType = "application/json",
+                            examples = {
+                                    @ExampleObject(name = "Room host 정보가 없는 경우",
+                                            value = "{\"isSuccess\": false, \"code\": \"404\", \"message\": \"요청하신 정보를 찾을 수 없습니다.\"}")
+                            }))
+    })
+    @GetMapping("/roomHost/{roomId}")
+    public BaseResponse<EachHostResponseDto> getRoomHost(@PathVariable Long roomId){
+        return BaseResponse.success(roomDetailService.getRoomHost(roomId));
+    }
 }
