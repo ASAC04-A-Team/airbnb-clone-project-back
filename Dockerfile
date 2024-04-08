@@ -1,7 +1,7 @@
-FROM openjdk:17-jdk
-LABEL authors="someone"
+FROM amazoncorretto:17-alpine
 
-COPY src /airbnb-back-end
-WORKDIR /airbnb-back-end
+ARG JAR_FILE=build/libs/*.jar
 
-CMD ["./gradlew", "bootRun"]
+COPY ${JAR_FILE} app.jar
+
+ENTRYPOINT ["java", "-jar", "/app.jar"]
