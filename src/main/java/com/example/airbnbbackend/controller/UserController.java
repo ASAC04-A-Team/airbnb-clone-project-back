@@ -1,10 +1,7 @@
 package com.example.airbnbbackend.controller;
 
 import com.example.airbnbbackend.common.dto.BaseResponse;
-import com.example.airbnbbackend.dto.responseDto.EachCategoryResponseDto;
-import com.example.airbnbbackend.dto.responseDto.UserHostReviewResponseDto;
-import com.example.airbnbbackend.dto.responseDto.UserInformationResponseDto;
-import com.example.airbnbbackend.dto.responseDto.UserIntroductionResponseDto;
+import com.example.airbnbbackend.dto.responseDto.*;
 import com.example.airbnbbackend.service.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
@@ -49,10 +46,10 @@ public class UserController {
                             }))
     })
     @GetMapping("/introduction/{userId}")
-    public BaseResponse<UserIntroductionResponseDto> getUserIntroduction(@PathVariable("userId") Long userId ){
+    public UserIntroductionResponseDto getUserIntroduction(@PathVariable("userId") Long userId ){
         UserIntroductionResponseDto userIntroduction = userService.findAllUserIntroduction(userId);
 
-        return BaseResponse.success(userIntroduction);
+        return userIntroduction;
     }
 
     /* Todo User 사용자 후기 조회 API -userId를 받으면 해당 User의 host_review Table을 List형식으로 가져오는 API */
@@ -70,9 +67,9 @@ public class UserController {
                             }))
     })
     @GetMapping("/hostReview/{userId}")
-    public BaseResponse<List<UserHostReviewResponseDto>> getUserHostReviews(@PathVariable("userId") Long userId){
+    public List <UserHostReviewResponseDto> getUserHostReviews(@PathVariable("userId") Long userId){
         List<UserHostReviewResponseDto> userHostReviews = userService.findUserHostReviews(userId);
-        return BaseResponse.success(userHostReviews);
+        return userHostReviews;
     }
 
     /* Todo User 사용자 정보 조회 API */
@@ -90,13 +87,13 @@ public class UserController {
                             }))
     })
     @GetMapping("/information/{userId}")
-    public BaseResponse<UserInformationResponseDto> getUserInformation(@PathVariable("userId") Long userId){
+    public UserInformationResponseDto getUserInformation(@PathVariable("userId") Long userId){
         UserInformationResponseDto userInformation = userService.findAllUserInformation(userId);
-        return BaseResponse.success(userInformation);
+        return userInformation;
     }
 
 //    /* Todo User 사용자 인증 정보 조회 API */
-    @GetMapping("/authInformation/{userId}")
+
     @Operation(summary = "Get User Auth information")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "00", description = "성공",
@@ -111,9 +108,11 @@ public class UserController {
                                             value = "{\"isSuccess\": false, \"code\": \"404\", \"message\": \"요청하신 사용자 권한 정보를 찾을 수 없습니다.\"}")
                             }))
     })
-    public Boolean getUserAuthInformation(@PathVariable("userId") Long userId){
-        Boolean userAuthInformation = userService.findUserAuthInformation(userId);
+
+    /* Todo User 사용자 인증 정보 조회 API */
+    @GetMapping("/authInformation/{userId}")
+    public UserAuthInformationDto getUserAuthInformation(@PathVariable("userId") Long userId){
+        UserAuthInformationDto userAuthInformation = userService.findUserAuthInformation(userId);
         return userAuthInformation;
     }
-
 }

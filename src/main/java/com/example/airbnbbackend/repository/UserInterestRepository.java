@@ -10,4 +10,5 @@ import java.util.List;
 public interface UserInterestRepository extends JpaRepository<UserInterest,Long> {
 
     UserInterest findUserInterestByUserId(Long UserId);
+
 }

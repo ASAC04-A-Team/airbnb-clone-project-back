@@ -3,10 +3,7 @@ package com.example.airbnbbackend.service;
 import com.example.airbnbbackend.domain.HostReview;
 import com.example.airbnbbackend.domain.User;
 import com.example.airbnbbackend.domain.UserInterest;
-import com.example.airbnbbackend.dto.responseDto.EachRoomReviewResponseDto;
-import com.example.airbnbbackend.dto.responseDto.UserHostReviewResponseDto;
-import com.example.airbnbbackend.dto.responseDto.UserInformationResponseDto;
-import com.example.airbnbbackend.dto.responseDto.UserIntroductionResponseDto;
+import com.example.airbnbbackend.dto.responseDto.*;
 import com.example.airbnbbackend.repository.UserHostReviewsRepository;
 import com.example.airbnbbackend.repository.UserInterestRepository;
 import com.example.airbnbbackend.repository.UserRepository;
@@ -44,10 +41,15 @@ public class UserService {
     public List<UserHostReviewResponseDto> findUserHostReviews(Long userId){
         List<HostReview> userHostReviews = userHostReviewsRepository.findHostReviewsByUserId(userId);
 
-        return userHostReviews.stream().map(
-                (eachUserHostReview) -> UserHostReviewResponseDto.of(eachUserHostReview)).toList();
-
-    }
+        return userHostReviews.stream()
+                .map(eachUserHostReview -> {
+                    int year = eachUserHostReview.getWriteAt().getYear();
+                    int month = eachUserHostReview.getWriteAt().getMonthValue();
+                    String stringYear = String.valueOf(year);
+                    String stringMonth = String.valueOf(month);
+                    return UserHostReviewResponseDto.of(eachUserHostReview,  stringYear, stringMonth);
+                })
+                .toList();}
 
     public UserInformationResponseDto findAllUserInformation(Long userId) {
 
@@ -73,10 +75,10 @@ public class UserService {
         return UserInformationResponseDto.of(user,hostReviewsNumsByUserId,sinceRegisterAt,separator);
     }
 
-    public Boolean findUserAuthInformation(Long userId){
+    public UserAuthInformationDto findUserAuthInformation(Long userId){
         User user = userRepository.findById(userId).orElse(null);
 
-        return user.getIsAuth();
+        return UserAuthInformationDto.of(user);
     }
 
 }
