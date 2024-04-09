@@ -47,6 +47,8 @@ public class UserController {
     })
     @GetMapping("/introduction/{userId}")
     public UserIntroductionResponseDto getUserIntroduction(@PathVariable("userId") Long userId ){
+
+
         UserIntroductionResponseDto userIntroduction = userService.findAllUserIntroduction(userId);
 
         return userIntroduction;

@@ -1,5 +1,7 @@
 package com.example.airbnbbackend.service;
 
+import com.example.airbnbbackend.common.Constants;
+import com.example.airbnbbackend.common.exception.customException.EmptyResourceException;
 import com.example.airbnbbackend.domain.HostReview;
 import com.example.airbnbbackend.domain.User;
 import com.example.airbnbbackend.domain.UserInterest;
@@ -20,6 +22,8 @@ import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
 
+import static com.example.airbnbbackend.common.Constants.ExceptionClass.USER;
+
 @Service
 @RequiredArgsConstructor
 @Slf4j
@@ -32,14 +36,20 @@ public class UserService {
 
     public UserIntroductionResponseDto findAllUserIntroduction(Long userId){
 
-        UserInterest userInterest = userInterestRepository.findUserInterestByUserId(userId);
+        UserInterest userInterest =
+                userInterestRepository.findUserInterestByUserId(userId).orElseThrow(()-> new EmptyResourceException(USER," DB에 해당 userInterest가 존재하지 않습니다."));
+
         UserIntroductionResponseDto userIntroductionResponseDto = UserIntroductionResponseDto.of(userInterest);
+
+        if(userIntroductionResponseDto == null){
+            new EmptyResourceException(USER,"유저 소개 DTO 생성을 실패했습니다.");
+        }
 
         return userIntroductionResponseDto;
     }
 
     public List<UserHostReviewResponseDto> findUserHostReviews(Long userId){
-        List<HostReview> userHostReviews = userHostReviewsRepository.findHostReviewsByUserId(userId);
+        List<HostReview> userHostReviews = userHostReviewsRepository.findHostReviewsByUserId(userId).orElseThrow(()-> new EmptyResourceException(USER,"DB에 해당 hostReview가 존재하지 않습니다"));
 
         return userHostReviews.stream()
                 .map(eachUserHostReview -> {
@@ -47,15 +57,16 @@ public class UserService {
                     int month = eachUserHostReview.getWriteAt().getMonthValue();
                     String stringYear = String.valueOf(year);
                     String stringMonth = String.valueOf(month);
-                    return UserHostReviewResponseDto.of(eachUserHostReview,  stringYear, stringMonth);
+                    return UserHostReviewResponseDto.of(eachUserHostReview, stringYear, stringMonth);
                 })
                 .toList();}
 
     public UserInformationResponseDto findAllUserInformation(Long userId) {
 
-        User user = userRepository.findById(userId).orElse(null);
+        User user = userRepository.findById(userId).orElseThrow(() -> new EmptyResourceException(USER,"존재하지 않는 유저입니다"));
+
         /** User의 Host 리뷰 수 */
-        int hostReviewsNumsByUserId = userHostReviewsRepository.findHostReviewsNumsByUserId(userId);
+        int hostReviewsNums = userHostReviewsRepository.findHostReviewsNumsByUserId(userId).orElseThrow(()-> new EmptyResourceException(USER,"리뷰를 가져오지 못했습니다"));
 
         LocalDateTime registerAt = user.getRegisterAt();
         LocalDateTime nowRegisterAt = LocalDateTime.now();
@@ -72,13 +83,24 @@ public class UserService {
             sinceRegisterAt = diff.getMonths();
             separator = "month";
         }
-        return UserInformationResponseDto.of(user,hostReviewsNumsByUserId,sinceRegisterAt,separator);
+        UserInformationResponseDto userInformationResponseDto = UserInformationResponseDto.of(user, hostReviewsNums, sinceRegisterAt, separator);
+
+        if(userInformationResponseDto == null){
+            new EmptyResourceException(USER,"유저 정보 DTO 생성을 실패했습니다.");
+        }
+        return userInformationResponseDto;
     }
 
     public UserAuthInformationDto findUserAuthInformation(Long userId){
-        User user = userRepository.findById(userId).orElse(null);
+        User user = userRepository.findById(userId).orElseThrow(() -> new EmptyResourceException(USER,"존재하지 않는 유저입니다"));
 
-        return UserAuthInformationDto.of(user);
+        UserAuthInformationDto userAuthInformationDto = UserAuthInformationDto.of(user);
+
+        if(userAuthInformationDto == null){
+            new EmptyResourceException(USER,"유저 인증 정보 DTO 생성을 실패했습니다.");
+        }
+
+        return userAuthInformationDto;
     }
 
 }
