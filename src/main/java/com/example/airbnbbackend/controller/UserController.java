@@ -46,10 +46,12 @@ public class UserController {
                             }))
     })
     @GetMapping("/introduction/{userId}")
-    public UserIntroductionResponseDto getUserIntroduction(@PathVariable("userId") Long userId ){
+    public BaseResponse<UserIntroductionResponseDto> getUserIntroduction(@PathVariable("userId") Long userId ){
+
+
         UserIntroductionResponseDto userIntroduction = userService.findAllUserIntroduction(userId);
 
-        return userIntroduction;
+        return BaseResponse.success(userIntroduction);
     }
 
     /* Todo User 사용자 후기 조회 API -userId를 받으면 해당 User의 host_review Table을 List형식으로 가져오는 API */
@@ -67,9 +69,9 @@ public class UserController {
                             }))
     })
     @GetMapping("/hostReview/{userId}")
-    public List <UserHostReviewResponseDto> getUserHostReviews(@PathVariable("userId") Long userId){
+    public BaseResponse <List <UserHostReviewResponseDto>> getUserHostReviews(@PathVariable("userId") Long userId){
         List<UserHostReviewResponseDto> userHostReviews = userService.findUserHostReviews(userId);
-        return userHostReviews;
+        return BaseResponse.success(userHostReviews);
     }
 
     /* Todo User 사용자 정보 조회 API */
@@ -87,9 +89,9 @@ public class UserController {
                             }))
     })
     @GetMapping("/information/{userId}")
-    public UserInformationResponseDto getUserInformation(@PathVariable("userId") Long userId){
+    public BaseResponse<UserInformationResponseDto> getUserInformation(@PathVariable("userId") Long userId){
         UserInformationResponseDto userInformation = userService.findAllUserInformation(userId);
-        return userInformation;
+        return BaseResponse.success(userInformation);
     }
 
 //    /* Todo User 사용자 인증 정보 조회 API */
@@ -111,8 +113,8 @@ public class UserController {
 
     /* Todo User 사용자 인증 정보 조회 API */
     @GetMapping("/authInformation/{userId}")
-    public UserAuthInformationDto getUserAuthInformation(@PathVariable("userId") Long userId){
+    public BaseResponse<UserAuthInformationDto> getUserAuthInformation(@PathVariable("userId") Long userId){
         UserAuthInformationDto userAuthInformation = userService.findUserAuthInformation(userId);
-        return userAuthInformation;
+        return BaseResponse.success(userAuthInformation);
     }
 }
