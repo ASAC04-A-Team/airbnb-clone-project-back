@@ -42,7 +42,7 @@ public class UserService {
         UserIntroductionResponseDto userIntroductionResponseDto = UserIntroductionResponseDto.of(userInterest);
 
         if(userIntroductionResponseDto == null){
-            new EmptyResourceException(USER,"유저 소개 DTO 생성을 실패했습니다.");
+            throw new EmptyResourceException(USER, "유저 소개 DTO 생성을 실패했습니다.");
         }
 
         return userIntroductionResponseDto;
@@ -86,7 +86,7 @@ public class UserService {
         UserInformationResponseDto userInformationResponseDto = UserInformationResponseDto.of(user, hostReviewsNums, sinceRegisterAt, separator);
 
         if(userInformationResponseDto == null){
-            new EmptyResourceException(USER,"유저 정보 DTO 생성을 실패했습니다.");
+            throw new EmptyResourceException(USER, "유저 정보 DTO 생성을 실패했습니다.");
         }
         return userInformationResponseDto;
     }
@@ -97,7 +97,7 @@ public class UserService {
         UserAuthInformationDto userAuthInformationDto = UserAuthInformationDto.of(user);
 
         if(userAuthInformationDto == null){
-            new EmptyResourceException(USER,"유저 인증 정보 DTO 생성을 실패했습니다.");
+            throw new EmptyResourceException(USER, "유저 인증 정보 DTO 생성을 실패했습니다.");
         }
 
         return userAuthInformationDto;
