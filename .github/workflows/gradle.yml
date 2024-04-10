@@ -69,7 +69,7 @@ jobs:
           username: ${{ secrets.EC2_USERNAME }}
           password: ${{ secrets.EC2_PASSWORD }}
           port: ${{ secrets.EC2_SSH_PORT }}
-          timeout: 60s
+          timeout: 300s
           script: |
             sudo docker stop airbnb-backend-demo
             sudo docker rm airbnb-backend-demo
