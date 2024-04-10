@@ -1,5 +1,7 @@
 package com.example.airbnbbackend.controller;
 
+import com.example.airbnbbackend.common.dto.BaseResponse;
+import com.example.airbnbbackend.dto.requestDto.ReviewSearchRequestDto;
 import com.example.airbnbbackend.dto.responseDto.EachRoomReviewSummaryResponseDto;
 import com.example.airbnbbackend.dto.responseDto.EachRoomReviewResponseDto;
 import com.example.airbnbbackend.service.ReviewService;
@@ -13,12 +15,10 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping(value = "/api/review")
@@ -72,4 +72,13 @@ public class ReviewController {
     public EachRoomReviewSummaryResponseDto getRoomReviewStatistic(@PathVariable Long roomId){
         return reviewService.findAllRoomReviewsStatistics(roomId);
     }
+
+
+    @PostMapping(value = { "/reviewSearch/{roomId}"})
+    public BaseResponse<List<EachRoomReviewResponseDto>> getRoomReviewSearch(@PathVariable("roomId") Long roomId, @RequestBody ReviewSearchRequestDto reviewSearchRequestDto) {
+        Optional<String> content = reviewSearchRequestDto.getContent().describeConstable();
+        return BaseResponse.success(reviewService.findRoomReviewSearch(roomId, content));
+    }
+
+
 }

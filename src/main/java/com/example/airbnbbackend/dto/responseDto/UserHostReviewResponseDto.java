@@ -14,14 +14,16 @@ public class UserHostReviewResponseDto {
 
     private String nickname;
     private String content;
-    private LocalDateTime writeAt;
+    private String year;
+    private String month;
 
 
-    public static UserHostReviewResponseDto of(HostReview hostReview){
+    public static UserHostReviewResponseDto of(HostReview hostReview,String year, String month ){
         return new UserHostReviewResponseDto(
                 hostReview.getHost().getUser().getNickname(),
                 hostReview.getContent(),
-                hostReview.getWriteAt()
+                year,
+                month
         );
     }
 }
