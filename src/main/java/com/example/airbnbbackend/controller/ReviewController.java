@@ -1,5 +1,7 @@
 package com.example.airbnbbackend.controller;
 
+import com.example.airbnbbackend.common.dto.BaseResponse;
+import com.example.airbnbbackend.dto.requestDto.ReviewSearchRequestDto;
 import com.example.airbnbbackend.dto.responseDto.EachRoomReviewSummaryResponseDto;
 import com.example.airbnbbackend.dto.responseDto.EachRoomReviewResponseDto;
 import com.example.airbnbbackend.service.ReviewService;
@@ -72,17 +74,10 @@ public class ReviewController {
     }
 
 
-    @GetMapping(value = { "/reviewSearch/{roomId}"})
-    public List<EachRoomReviewResponseDto> getRoomReviewSearch(@PathVariable("roomId") Long roomId, @RequestParam Optional<String> content) {
-        log.info("실행중");
-
-        if (content.isEmpty()) {
-            log.info("content가 비었습니다.");
-            return reviewService.findAllRoomReviews(roomId);
-        }
-
-        return reviewService.findRoomReviewSearch(roomId, content);
-
+    @PostMapping(value = { "/reviewSearch/{roomId}"})
+    public BaseResponse<List<EachRoomReviewResponseDto>> getRoomReviewSearch(@PathVariable("roomId") Long roomId, @RequestBody ReviewSearchRequestDto reviewSearchRequestDto) {
+        Optional<String> content = reviewSearchRequestDto.getContent().describeConstable();
+        return BaseResponse.success(reviewService.findRoomReviewSearch(roomId, content));
     }
 
 
