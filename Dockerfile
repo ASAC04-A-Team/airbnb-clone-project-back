@@ -1,11 +1,7 @@
-# Base image
 FROM amazoncorretto:17-alpine
 
-# Set working directory
-WORKDIR /app
+ARG JAR_FILE=build/libs/*.jar
 
-# Copy JAR file to the container
-COPY build/libs/ /app/
+COPY ${JAR_FILE} app.jar
 
-# Define entrypoint
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "/app.jar"]
